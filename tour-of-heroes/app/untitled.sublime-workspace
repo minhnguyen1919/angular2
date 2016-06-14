@@ -519,6 +519,22 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app/app.component.ts",
+			"settings":
+			{
+				"buffer_size": 1243,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "common/service/hero.service.ts",
+			"settings":
+			{
+				"buffer_size": 334,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -892,15 +908,21 @@
 		"/home/minhnguyen/minhnguyen/angularjs-training",
 		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes",
 		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app",
-		"/home/minhnguyen/laelia/webapp/.git",
-		"/home/minhnguyen/laelia/webapp/src",
-		"/home/minhnguyen/laelia/webapp/src/modules",
-		"/home/minhnguyen/laelia/webapp/src/modules/app",
-		"/home/minhnguyen/laelia/webapp/src/modules/search",
-		"/home/minhnguyen/laelia/webapp/src/modules/search/controllers"
+		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/app",
+		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/common",
+		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/common/model",
+		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/common/service",
+		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/dashboard"
 	],
 	"file_history":
 	[
+		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/main.ts",
+		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/heroes/heroes.component.ts",
+		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/common/service/hero.service.ts",
+		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/common/constant/mock-heroes.ts",
+		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/dashboard/dashboard.component.ts",
+		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/hero-detail/hero-detail.component.ts",
+		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/app/app.component.ts",
 		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/app.component.js",
 		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/heroes.component.ts",
 		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/heroes.component.css",
@@ -1021,14 +1043,7 @@
 		"/home/minhnguyen/apricot/webapp/src/app/components/news/news.directive.js",
 		"/home/minhnguyen/apricot/webapp/src/app/pages/landing/components/news/news.module.js",
 		"/home/minhnguyen/apricot/webapp/src/app/pages/landing/components/news/news.html",
-		"/home/minhnguyen/apricot/webapp/src/app/pages/landing/components/news/news.directive.js",
-		"/home/minhnguyen/apricot/webapp/src/app/components/network/network.module.js",
-		"/home/minhnguyen/apricot/webapp/src/app/components/network/network.html",
-		"/home/minhnguyen/apricot/webapp/src/app/components/network/network.directive.js",
-		"/home/minhnguyen/apricot/webapp/src/app/app.module.js",
-		"/home/minhnguyen/apricot/webapp/src/app/pages/landing/landing.route.js",
-		"/home/minhnguyen/apricot/webapp/src/app/pages/main/main.route.js",
-		"/home/minhnguyen/apricot/webapp/src/tpl-index.html"
+		"/home/minhnguyen/apricot/webapp/src/app/pages/landing/components/news/news.directive.js"
 	],
 	"find":
 	{
@@ -1174,6 +1189,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"dashboard",
 			"AppComponent",
 			"HeroService",
 			"App",
@@ -1300,8 +1316,7 @@
 			"ul",
 			"paramName",
 			"searchByKey",
-			"type",
-			"params"
+			"type"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1407,8 +1422,77 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/app.component.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1243,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1139,
+								1139
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true,
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "common/service/hero.service.ts",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 334,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true,
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],

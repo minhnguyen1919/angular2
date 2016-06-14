@@ -39,6 +39,7 @@ import { HeroDetailComponent } from '../hero-detail/hero-detail.component';
     ROUTER_DIRECTIVES
   ],
   providers: [
+    // define HeroService in here to all app just create 1 instance of HeroService
     HeroService,
     ROUTER_PROVIDERS
   ]
