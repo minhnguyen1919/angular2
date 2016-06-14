@@ -1,0 +1,23 @@
+{
+	"folders":
+	[
+		{
+			"file_exclude_patterns":
+			[
+				"*.js",
+				"*.map"
+			],
+			"folder_exclude_patterns":
+			[
+				"wp-includes",
+				"wp-admin",
+				"wp-content/plugins",
+				"wp-content/uploads"
+			],
+			"path": "/home/minhnguyen/minhnguyen/angularjs-training"
+		},
+		{
+			"path": "/home/minhnguyen/laelia/webapp"
+		}
+	]
+}
