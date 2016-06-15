@@ -1,0 +1,11 @@
+node_modules/
+bower_components/
+.sass-cache/
+.idea/
+.tmp/
+dist/
+app/**/*.js
+app/**/*.js.map
+typings/
+npm-debug.log
+.babelrc

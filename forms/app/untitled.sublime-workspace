@@ -4,18 +4,6 @@
 		"selected_items":
 		[
 			[
-				"Event",
-				"EventEmitter	alias"
-			],
-			[
-				"hero",
-				"heroes	property"
-			],
-			[
-				"he",
-				"hero	property"
-			],
-			[
 				"style",
 				"styleUrls	property"
 			],
@@ -30,6 +18,10 @@
 			[
 				"her",
 				"heroes	property"
+			],
+			[
+				"hero",
+				"heroService	property"
 			],
 			[
 				"generat",
@@ -514,72 +506,32 @@
 			[
 				"response",
 				"responseData"
+			],
+			[
+				"email",
+				"emailAlreadyInUse"
+			],
+			[
+				"chooseEmplo",
+				"chooseEmployerMessageFail"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "/home/minhnguyen/minhnguyen/angularjs-training/user-input/app/main.ts",
+			"file": "app/app.component.ts",
 			"settings":
 			{
-				"buffer_size": 139,
+				"buffer_size": 1243,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/minhnguyen/minhnguyen/angularjs-training/user-input/app/user-input/click-me.component.ts",
+			"file": "common/service/hero.service.ts",
 			"settings":
 			{
-				"buffer_size": 302,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/minhnguyen/minhnguyen/angularjs-training/user-input/app/user-input/key-up-1.component.ts",
-			"settings":
-			{
-				"buffer_size": 337,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/minhnguyen/minhnguyen/angularjs-training/user-input/app/user-input/loop-back.component.ts",
-			"settings":
-			{
-				"buffer_size": 197,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/minhnguyen/minhnguyen/angularjs-training/user-input/app/user-input/key-up-2.component.ts",
-			"settings":
-			{
-				"buffer_size": 305,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/minhnguyen/minhnguyen/angularjs-training/user-input/app/app.component.ts",
-			"settings":
-			{
-				"buffer_size": 1069,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/minhnguyen/minhnguyen/angularjs-training/user-input/app/user-input/key-up-3.component.ts",
-			"settings":
-			{
-				"buffer_size": 248,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/minhnguyen/minhnguyen/angularjs-training/user-input/app/user-input/little-tour.component.ts",
-			"settings":
-			{
-				"buffer_size": 531,
+				"buffer_size": 334,
 				"line_ending": "Unix"
 			}
 		}
@@ -591,17 +543,17 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 285.0,
-		"last_filter": "ruby",
+		"height": 392.0,
+		"last_filter": "inde",
 		"selected_items":
 		[
 			[
-				"ruby",
-				"Set Syntax: Ruby"
-			],
-			[
 				"inde",
 				"Indentation: Reindent Lines"
+			],
+			[
+				"ruby",
+				"Set Syntax: Ruby"
 			],
 			[
 				"tsc",
@@ -954,33 +906,23 @@
 	"expanded_folders":
 	[
 		"/home/minhnguyen/minhnguyen/angularjs-training",
+		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes",
 		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app",
+		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/app",
 		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/common",
-		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/common/constant",
+		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/common/model",
 		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/common/service",
-		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/hero-detail",
-		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/heroes",
-		"/home/minhnguyen/minhnguyen/angularjs-training/user-input",
-		"/home/minhnguyen/minhnguyen/angularjs-training/user-input/app",
-		"/home/minhnguyen/minhnguyen/angularjs-training/user-input/app/user-input"
+		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/dashboard"
 	],
 	"file_history":
 	[
-		"/home/minhnguyen/minhnguyen/angularjs-training/user-input/app/user-input/key-up-2.component.ts",
-		"/home/minhnguyen/apricot/tool/Vagrantfile",
-		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/common/service/in-memory-data.service.ts",
-		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/hero-detail/hero-detail.component.html",
-		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/heroes/heroes.component.ts",
-		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/heroes/heroes.component.html",
-		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/hero-detail/hero-detail.component.ts",
-		"/home/minhnguyen/minhnguyen/angularjs-training/user-input/app/app.component.ts",
-		"/home/minhnguyen/minhnguyen/angularjs-training/user-input/app/main.ts",
-		"/home/minhnguyen/minhnguyen/angularjs-training/user-input/styles.css",
-		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/common/service/hero.service.ts",
-		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/app/app.component.ts",
 		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/main.ts",
+		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/heroes/heroes.component.ts",
+		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/common/service/hero.service.ts",
 		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/common/constant/mock-heroes.ts",
 		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/dashboard/dashboard.component.ts",
+		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/hero-detail/hero-detail.component.ts",
+		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/app/app.component.ts",
 		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/app.component.js",
 		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/heroes.component.ts",
 		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app/heroes.component.css",
@@ -1004,6 +946,7 @@
 		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/README",
 		"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/.gitignore",
 		"/home/minhnguyen/minhnguyen/angularjs-training/.gitignore",
+		"/home/minhnguyen/apricot/tool/Vagrantfile",
 		"/home/minhnguyen/minhnguyen/angularjs-training/quickstart/package.json",
 		"/home/minhnguyen/apricot/tool/test/angular/quickstart/systemjs.config.js",
 		"/home/minhnguyen/apricot/tool/test/angular/quickstart/typings.json",
@@ -1093,7 +1036,14 @@
 		"/home/minhnguyen/Dropbox/project/apricot/webapp/05-31/src/app/pages/main/main.html",
 		"/home/minhnguyen/apricot/tool/test/babel-test/gulpfile.js",
 		"/home/minhnguyen/apricot/webapp/src/app/core/services/resolver.provider.js",
-		"/home/minhnguyen/apricot/data/agility-io-uspa/agility-io-uspa/index.html"
+		"/home/minhnguyen/apricot/data/agility-io-uspa/agility-io-uspa/index.html",
+		"/home/minhnguyen/Dropbox/project/apricot/webapp/05-31/src/app/pages/landing/landing.html",
+		"/home/minhnguyen/apricot/webapp/src/app/components/news/news.module.js",
+		"/home/minhnguyen/apricot/webapp/src/app/components/news/news.html",
+		"/home/minhnguyen/apricot/webapp/src/app/components/news/news.directive.js",
+		"/home/minhnguyen/apricot/webapp/src/app/pages/landing/components/news/news.module.js",
+		"/home/minhnguyen/apricot/webapp/src/app/pages/landing/components/news/news.html",
+		"/home/minhnguyen/apricot/webapp/src/app/pages/landing/components/news/news.directive.js"
 	],
 	"find":
 	{
@@ -1104,7 +1054,6 @@
 		"height": 93.0,
 		"where_history":
 		[
-			"/home/minhnguyen/minhnguyen/angularjs-training/tour-of-heroes/app",
 			"/home/minhnguyen/laelia/webapp/src/modules",
 			"/home/minhnguyen/laelia/webapp/src/modules/book-appointment",
 			"/home/minhnguyen/laelia/webapp/src/modules",
@@ -1231,7 +1180,8 @@
 			"/home/minhnguyen/laelia/hrportal",
 			"/home/minhnguyen/laelia/webapp/src/modules",
 			"/home/minhnguyen/laelia/webapp/src/styles",
-			"/home/minhnguyen/laelia/webapp/src/modules"
+			"/home/minhnguyen/laelia/webapp/src/modules",
+			"/home/minhnguyen/laelia/webapp/src/modules/auth"
 		]
 	},
 	"find_state":
@@ -1239,7 +1189,6 @@
 		"case_sensitive": true,
 		"find_history":
 		[
-			".delete-button",
 			"dashboard",
 			"AppComponent",
 			"HeroService",
@@ -1366,7 +1315,8 @@
 			"reg_step",
 			"ul",
 			"paramName",
-			"searchByKey"
+			"searchByKey",
+			"type"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1472,244 +1422,30 @@
 	"groups":
 	[
 		{
-			"selected": 7,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/home/minhnguyen/minhnguyen/angularjs-training/user-input/app/main.ts",
+					"file": "app/app.component.ts",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 139,
+						"buffer_size": 1243,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								139,
-								139
+								1139,
+								1139
 							]
 						],
 						"settings":
 						{
 							"editorconfig": true,
 							"ensure_newline_at_eof_on_save": true,
-							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true,
-							"typescript_plugin_format_options":
-							{
-								"convertTabsToSpaces": true,
-								"indentSize": 2,
-								"tabSize": 2
-							},
-							"use_tab_stops": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/home/minhnguyen/minhnguyen/angularjs-training/user-input/app/user-input/click-me.component.ts",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 302,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"open_with_edit": true,
-							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true,
-							"use_tab_stops": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/home/minhnguyen/minhnguyen/angularjs-training/user-input/app/user-input/key-up-1.component.ts",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 337,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"open_with_edit": true,
-							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true,
-							"use_tab_stops": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/home/minhnguyen/minhnguyen/angularjs-training/user-input/app/user-input/loop-back.component.ts",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 197,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								126,
-								126
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"open_with_edit": true,
-							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true,
-							"use_tab_stops": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/home/minhnguyen/minhnguyen/angularjs-training/user-input/app/user-input/key-up-2.component.ts",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 305,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								165,
-								165
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true,
-							"use_tab_stops": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "/home/minhnguyen/minhnguyen/angularjs-training/user-input/app/app.component.ts",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1069,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1030,
-								1030
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true,
-							"use_tab_stops": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "/home/minhnguyen/minhnguyen/angularjs-training/user-input/app/user-input/key-up-3.component.ts",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 248,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								167,
-								167
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"open_with_edit": true,
 							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true,
@@ -1724,27 +1460,26 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "/home/minhnguyen/minhnguyen/angularjs-training/user-input/app/user-input/little-tour.component.ts",
-					"semi_transient": false,
+					"buffer": 1,
+					"file": "common/service/hero.service.ts",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 531,
+						"buffer_size": 334,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								375,
-								375
+								0,
+								0
 							]
 						],
 						"settings":
 						{
 							"editorconfig": true,
 							"ensure_newline_at_eof_on_save": true,
-							"open_with_edit": true,
 							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true,
