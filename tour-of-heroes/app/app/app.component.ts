@@ -5,6 +5,8 @@ import { DashboardComponent } from '../dashboard/dashboard.component';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
 import { HeroDetailComponent } from '../hero-detail/hero-detail.component';
 
+import { Logger } from '../common/service/logger.service';
+
 @RouteConfig([
   {
     path: '/heroes',
@@ -41,7 +43,8 @@ import { HeroDetailComponent } from '../hero-detail/hero-detail.component';
   providers: [
     // define HeroService in here to all app just create 1 instance of HeroService
     HeroService,
-    ROUTER_PROVIDERS
+    ROUTER_PROVIDERS,
+    Logger,
   ]
 })
 export class AppComponent {

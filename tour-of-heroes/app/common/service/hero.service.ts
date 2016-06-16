@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import {Injectable, Optional} from '@angular/core';
 
 import {HEROES} from '../constant/mock-heroes';
 
@@ -8,13 +8,18 @@ import {Hero} from '../model/hero';
 
 import 'rxjs/add/operator/toPromise';
 
+import { Logger } from './logger.service';
+
 @Injectable()
 
 export class HeroService {
 
   private heroesUrl = 'app/heroes';  // URL to web api
 
-  constructor(private http: Http) {
+  constructor(
+    private http: Http,
+    @Optional() private logger: Logger
+  ) {
 
   }
 
