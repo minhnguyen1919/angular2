@@ -1,7 +1,8 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, Inject } from '@angular/core';
 import { RouteParams } from '@angular/router-deprecated';
 import { Hero } from '../common/model/hero';
 import { HeroService } from '../common/service/hero.service';
+import { AppConfig, APP_CONFIG } from '../app.config';
 
 
 @Component({
@@ -30,11 +31,14 @@ export class HeroDetailComponent implements OnInit {
       this.navigated = false;
       this.hero = new Hero();
     }
+
+    console.log(this.config.title);
   }
 
   constructor(
     private heroService: HeroService,
-    private routeParams: RouteParams
+    private routeParams: RouteParams,
+    @Inject(APP_CONFIG) private config: AppConfig
   ) {
 
   }
