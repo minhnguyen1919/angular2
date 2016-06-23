@@ -70,4 +70,8 @@ export class HeroesComponent implements OnInit {
      })
      .catch(error => this.error = error);
  }
+
+ trackByHero (index: number, hero: Hero) {
+   return hero.id;
+ }
 }
