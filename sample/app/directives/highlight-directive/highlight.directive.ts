@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Input } from '@angular/core';
+import { Directive, ElementRef, Input, HostListener } from '@angular/core';
 
 @Directive({
   /*
@@ -13,8 +13,29 @@ import { Directive, ElementRef, Input } from '@angular/core';
 })
 
 export class HighlightDirective {
+
+  private _defaultColor: string = 'red';
+
+  @Input('myHighlight') highlightColor: string;
+
+  @Input() set defaultColor (color: string) {
+    this._defaultColor = color || this._defaultColor;
+  }
+
   // ElementRef use to access the DOM element
-  constructor (el: ElementRef) {
-    el.nativeElement.style.backgroundColor = 'yellow';
+  constructor (private el: ElementRef) {
+    // el.nativeElement.style.backgroundColor = 'yellow';
+  }
+
+  @HostListener('mouseenter') onMouseEnter () {
+    this.highlight(this.highlightColor || this._defaultColor);
+  }
+
+  @HostListener('mouseleave') onMouseLeave () {
+    this.highlight(null);
+  }
+
+  private highlight (color) {
+    this.el.nativeElement.style.backgroundColor = color;
   }
 }
