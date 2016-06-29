@@ -1,4 +1,48 @@
-<main>
-  <h1>Hello from Angular 2 App with Webpack</h1>
-  <!-- <img src="../../public/images/angular.png"> -->
-</main>
+<section id="todoapp">
+  <header id="header">
+    <h1>todos</h1>
+    <input id="new-todo" placeholder="What needs to be done?" autofocus>
+  </header>
+  <section id="main">
+    <input id="toggle-all" type="checkbox">
+    <label for="toggle-all">Mark all as complete</label>
+    <ul id="todo-list">
+      <li class="completed">
+        <div class="view">
+          <input class="toggle" type="checkbox">
+          <label>Todo 1</label>
+          <button class="destroy"></button>
+        </div>
+        <input class="edit" value="{{title}}">
+      </li>
+      <li class="">
+        <div class="view">
+          <input class="toggle" type="checkbox">
+          <label>Todo 2</label>
+          <button class="destroy"></button>
+        </div>
+        <input class="edit" value="{{title}}">
+      </li>
+    </ul>
+  </section>
+  <footer id="footer">
+    <span id="todo-count"><strong>10</strong> left</span>
+    <ul id="filters">
+      <li>
+        <a class="selected" href="#/all">All</a>
+      </li>
+      <li>
+        <a class="" href="#/active">Active</a>
+      </li>
+      <li>
+        <a class="" href="#/completed">Completed</a>
+      </li>
+    </ul>
+    <button id="clear-completed">Clear completed</button>
+  </footer>
+</section>
+<footer id="info">
+  <p>Double-click to edit a todo</p>
+  <p>Created by <a href="http://sindresorhus.com">Sindre Sorhus</a></p>
+  <p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
+</footer>

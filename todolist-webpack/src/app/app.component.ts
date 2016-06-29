@@ -3,11 +3,10 @@ import { Component } from '@angular/core';
 import '../../public/css/styles.css';
 
 @Component({
-  selector: 'my-app',
+  selector: 'todo-app',
   template: require('./app.component.html'),
-  styles: [require('./app.component.css')]
 })
 
-export class AppComponent { 
+export class AppComponent {
 
 }
