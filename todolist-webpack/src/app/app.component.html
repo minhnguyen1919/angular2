@@ -1,24 +1,24 @@
 <section id="todoapp">
   <header id="header">
     <h1>todos</h1>
-    <input id="new-todo" placeholder="What needs to be done?" autofocus>
+    <input id="new-todo" placeholder="What needs to be done?" autofocus [(ngModel)]="newTodo" (keyup)="addTodo($event)">
   </header>
   <section id="main">
-    <input id="toggle-all" type="checkbox">
+    <input id="toggle-all" type="checkbox" (change)="toggleTodos()" [checked]="toggle">
     <label for="toggle-all">Mark all as complete</label>
-    <todos [todos]="todos"></todos>
+    <todos [todos]="todos" [filter]="filter"></todos>
   </section>
   <footer id="footer">
-    <span id="todo-count"><strong>10</strong> left</span>
+    <span id="todo-count"><strong>{{todos | leftTodo}}</strong> left</span>
     <ul id="filters">
       <li>
-        <a class="selected" href="#/all">All</a>
+        <a [class.selected]="filter === 'all'" href="javascript:void(0)" (click)="filter='all'">All</a>
       </li>
       <li>
-        <a class="" href="#/active">Active</a>
+        <a [class.selected]="filter === 'active'" href="javascript:void(0)" (click)="filter='active'">Active</a>
       </li>
       <li>
-        <a class="" href="#/completed">Completed</a>
+        <a [class.selected]="filter === 'completed'" href="javascript:void(0)" (click)="filter='completed'">Completed</a>
       </li>
     </ul>
     <button id="clear-completed">Clear completed</button>
