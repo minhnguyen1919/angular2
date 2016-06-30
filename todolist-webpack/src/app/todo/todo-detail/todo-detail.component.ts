@@ -13,8 +13,30 @@ export class TodoDetailComponent {
 
   @Output('deleteTodo') delete = new EventEmitter();
 
+  private backupTodo: Todo;
+
+  edit() {
+    this.backupTodo = Object.assign({}, this.todo);
+    // this.backupTodo = this.todo;
+    this.todo.isEditting = true;
+  }
+
   deleteTodo(todo: Todo) {
     this.delete.emit(todo);
+  }
+
+  saveTodo(event: any) {
+
+    switch(event.keyCode) {
+      case 13:
+        this.todo.isEditting = false;
+        break;
+
+      case 27:
+        this.todo.name = this.backupTodo.name;
+        this.todo.isEditting = false;
+        break;
+    }
   }
 
 }

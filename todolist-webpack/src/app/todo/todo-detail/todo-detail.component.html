@@ -1,6 +1,6 @@
 <div class="view">
   <input class="toggle" type="checkbox" [checked]="todo.isCompleted" (change)="todo.isCompleted=!todo.isCompleted">
-  <label>{{todo.name}}</label>
+  <label (dblclick)="edit()">{{todo.name}}</label>
   <button class="destroy" (click)="deleteTodo(todo)"></button>
 </div>
-<input class="edit" value="{{todo.name}}">
+<input class="edit" [(ngModel)]="todo.name" (keyup)="saveTodo($event)">
