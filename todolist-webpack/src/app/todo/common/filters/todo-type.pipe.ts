@@ -3,7 +3,8 @@ import { Pipe, PipeTransform } from '@angular/core'
 import { Todo } from '../models/todo';
 
 @Pipe({
-  name: 'todoType'
+  name: 'todoType',
+  pure: false
 })
 
 export class TodoTypePipe implements PipeTransform {

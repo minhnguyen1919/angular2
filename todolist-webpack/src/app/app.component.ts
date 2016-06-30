@@ -55,6 +55,12 @@ export class AppComponent implements OnInit {
 
   }
 
+  clearCompletedTodo() {
+    this.todos = this.todos.filter(function (todo) {
+      return todo.isCompleted === false;
+    })
+  }
+
   toggleTodos() {
     this.toggle = !this.toggle;
 
