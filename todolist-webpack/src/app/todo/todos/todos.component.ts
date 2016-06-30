@@ -26,23 +26,20 @@ export class TodosComponent implements OnInit {
   }
 
   ngOnInit() {
-    // this.todos.push({
-    //   id: '1',
-    //   name: 'Todo 1',
-    //   isCompleted: false
-    // });
-
-    // this.todos.push({
-    //   id: '2',
-    //   name: 'Todo 2',
-    //   isCompleted: true
-    // });
-
     this.todoService.getTodos()
       .then(todos => this.todos = todos);
 
     console.log(this.todos);
   }
 
+  deleteTodo(removedTodo: Todo) {
+
+    var index = this.todos.findIndex(function (todo) {
+      return todo.id === removedTodo.id;
+    })
+
+    this.todos.splice(index, 1);
+
+  }
 
 }

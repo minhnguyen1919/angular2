@@ -1,5 +1,5 @@
 <ul id="todo-list">
   <li *ngFor="let todo of todos" [class.completed]="todo.isCompleted">
-    <todo-detail [todo]="todo"></todo-detail>
+    <todo-detail [todo]="todo" (deleteTodo)="deleteTodo($event)"></todo-detail>
   </li>
 </ul>
