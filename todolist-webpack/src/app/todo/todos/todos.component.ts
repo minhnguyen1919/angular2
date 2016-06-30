@@ -1,35 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { Todo } from '../common/models/todo';
 import { TodoDetailComponent } from '../todo-detail/todo-detail.component';
-
-import { TodoService } from '../common/services/todo.service';
 
 @Component({
   selector: 'todos',
   template: require('./todos.component.html'),
   directives: [
     TodoDetailComponent
-  ],
-  providers: [
-    TodoService
   ]
 })
 
-export class TodosComponent implements OnInit {
-  todos: Todo[] = [];
+export class TodosComponent{
+  @Input('todos') todos: Todo[];
 
-  constructor (
-    private todoService: TodoService
-  ) {
+  constructor () {
 
-  }
-
-  ngOnInit() {
-    this.todoService.getTodos()
-      .then(todos => this.todos = todos);
-
-    console.log(this.todos);
   }
 
   deleteTodo(removedTodo: Todo) {
