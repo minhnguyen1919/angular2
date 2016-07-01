@@ -7,6 +7,8 @@ import { TodoService } from './todo/common/services/todo.service';
 import { Todo } from './todo/common/models/todo';
 import { LeftTodoPipe } from './todo/common/filters/left-todo.pipe';
 
+import * as _ from 'lodash';
+
 @Component({
   selector: 'todo-app',
   template: require('./app.component.html'),
@@ -56,9 +58,9 @@ export class AppComponent implements OnInit {
   }
 
   clearCompletedTodo() {
-    this.todos = this.todos.filter(function (todo) {
+    this.todos = _.filter(this.todos, function (todo) {
       return todo.isCompleted === false;
-    })
+    });
   }
 
   toggleTodos() {
