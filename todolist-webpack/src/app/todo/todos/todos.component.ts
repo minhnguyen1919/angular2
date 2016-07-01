@@ -4,6 +4,8 @@ import { Todo } from '../common/models/todo';
 import { TodoDetailComponent } from '../todo-detail/todo-detail.component';
 import { TodoTypePipe } from '../common/filters/todo-type.pipe';
 
+import * as _ from 'lodash';
+
 @Component({
   selector: 'todos',
   template: require('./todos.component.html'),
@@ -25,11 +27,9 @@ export class TodosComponent{
 
   deleteTodo(removedTodo: Todo) {
 
-    var index = this.todos.findIndex(function (todo) {
+    _.remove(this.todos, function (todo) {
       return todo.id === removedTodo.id;
-    })
-
-    this.todos.splice(index, 1);
+    });
 
   }
 

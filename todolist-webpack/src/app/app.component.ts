@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, DoCheck } from '@angular/core';
 
 import '../../public/css/styles.css';
 
@@ -23,7 +23,7 @@ import * as _ from 'lodash';
   ]
 })
 
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, DoCheck {
   todos: Todo[] = [];
   newTodo: string = '';
   toggle: boolean = false;
@@ -42,6 +42,12 @@ export class AppComponent implements OnInit {
     console.log(this.todos);
   }
 
+  ngDoCheck() {
+    console.log('Check');
+    let check = _.some(this.todos, {isCompleted: false});
+    this.toggle = !check;
+  }
+
   addTodo(event: any) {
     if (event.keyCode === 13) {
       this.todos.push({
@@ -58,9 +64,9 @@ export class AppComponent implements OnInit {
   }
 
   clearCompletedTodo() {
-    this.todos = _.filter(this.todos, function (todo) {
-      return todo.isCompleted === false;
-    });
+    _.remove(this.todos, function(todo) {
+      return todo.isCompleted === true;
+    })
   }
 
   toggleTodos() {
