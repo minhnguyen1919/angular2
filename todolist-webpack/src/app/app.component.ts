@@ -6,6 +6,7 @@ import { TodosComponent } from './todo/todos/todos.component';
 import { TodoService } from './todo/common/services/todo.service';
 import { Todo } from './todo/common/models/todo';
 import { LeftTodoPipe } from './todo/common/filters/left-todo.pipe';
+import { UUIDService } from './todo/common/services/uuid.service';
 
 import * as _ from 'lodash';
 
@@ -16,7 +17,8 @@ import * as _ from 'lodash';
     TodosComponent
   ],
   providers: [
-    TodoService
+    TodoService,
+    UUIDService
   ],
   pipes: [
     LeftTodoPipe
@@ -30,7 +32,8 @@ export class AppComponent implements OnInit, DoCheck {
   filter: string = 'all';
 
   constructor (
-    private todoService: TodoService
+    private todoService: TodoService,
+    private uuidService: UUIDService
   ) {
 
   }
@@ -43,15 +46,15 @@ export class AppComponent implements OnInit, DoCheck {
   }
 
   ngDoCheck() {
-    console.log('Check');
     let check = _.some(this.todos, {isCompleted: false});
     this.toggle = !check;
   }
 
   addTodo(event: any) {
+
     if (event.keyCode === 13) {
       this.todos.push({
-        id: '10',
+        id: this.uuidService.generate(),
         name: this.newTodo,
         isCompleted: false,
         isEditting: false
