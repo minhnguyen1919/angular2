@@ -1,0 +1,10 @@
+#Training AngularJS 2
+
+##Prerequisite
+
+- Install Node.js® and npm if they are not already on your machine. (at least node v5.x.x and npm 3.x.x)
+
+##Run project
+
+- npm install
+- npm run start
