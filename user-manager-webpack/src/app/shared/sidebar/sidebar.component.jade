@@ -1,7 +1,7 @@
 .col-sm-3.col-md-2.sidebar
   ul.nav.nav-sidebar
     li.active
-      a(href='#') View all users
+      a(href="javascript: void(0);" [router-link]=['/users']) View all users
         span.sr-only (current)
     li
-      a(href='#') Add new user
+      a(href="javascript: void(0);" [router-link]=['profile']) Add new user

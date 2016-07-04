@@ -4,12 +4,9 @@ import '../../public/css/styles.scss';
 
 import {
   HeaderComponent,
-  SidebarComponent
-} from './shared';
-
-import {
+  SidebarComponent,
   ContentComponent
-} from './content';
+} from './shared';
 
 @Component({
   selector: 'user-manager',

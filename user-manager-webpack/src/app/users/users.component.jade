@@ -1,0 +1,28 @@
+h2.sub-header Users manager
+.row
+  .table-responsive.col-md-8
+    table.table.table-striped
+      thead
+        tr
+          th Id
+          th User name
+          th Address
+          th Email
+          th Edit
+          th Delete
+      tbody#view-all-user
+
+  form.col-md-4(method="post")
+    div.form-group
+      label(for="userId") Id
+      input#userId.form-control(type="text" placeholder="UserId" disabled)
+    div.form-group
+      label(for="userName") Username
+      input#userName.form-control(type="text" placeholder="Username")
+    div.form-group
+      label(for="userAddress") Address
+      input#userAddress.form-control(type="text" placeholder="Address")
+    div.form-group
+      label(for="userEmail") Email
+      input#userEmail.form-control(type="text" placeholder="Email")
+    button#add-edit-user.btn.btn-default(type="submit") Add user
