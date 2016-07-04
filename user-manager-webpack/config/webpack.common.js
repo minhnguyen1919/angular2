@@ -22,7 +22,7 @@ module.exports = {
       },
       {
         test: /\.jade$/,
-        loader: 'jade'
+        loader: 'raw!jade-html'
       },
       {
         test: /\.html$/,
@@ -33,9 +33,9 @@ module.exports = {
         loader: 'file?name=assets/[name].[hash].[ext]'
       },
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         exclude: helpers.root('src', 'app'),
-        loader: ExtractTextPlugin.extract('style', 'css?sourceMap')
+        loader: ExtractTextPlugin.extract('style!css!sass', 'css?sourceMap')
       },
       {
         test: /\.css$/,

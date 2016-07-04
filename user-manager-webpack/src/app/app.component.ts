@@ -1,10 +1,24 @@
 import { Component } from '@angular/core';
 
-import '../../public/css/styles.css';
+import '../../public/css/styles.scss';
+
+import {
+  HeaderComponent,
+  SidebarComponent
+} from './shared';
+
+import {
+  ContentComponent
+} from './content';
 
 @Component({
-  selector: 'todo-app',
+  selector: 'user-manager',
   template: require('./app.component.jade'),
+  directives: [
+    HeaderComponent,
+    SidebarComponent,
+    ContentComponent
+  ]
 })
 
 export class AppComponent {
