@@ -4,6 +4,11 @@ import { UsersComponent } from './users';
 import { ProfileComponent } from './profile';
 
 export const routes: RouterConfig = [
+  // {
+  //   path: '',
+  //   redirectTo: '/profile',
+  //   pathMatch: 'full'
+  // },
   {
     path: 'profile',
     component: ProfileComponent
