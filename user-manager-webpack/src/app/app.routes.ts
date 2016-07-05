@@ -1,22 +1,14 @@
 import { provideRouter, RouterConfig } from '@angular/router';
 
-import { UsersComponent } from './users';
+import { UsersRoutes } from './users';
 import { ProfileComponent } from './profile';
 
 export const routes: RouterConfig = [
-  // {
-  //   path: '',
-  //   redirectTo: '/profile',
-  //   pathMatch: 'full'
-  // },
   {
     path: 'profile',
     component: ProfileComponent
   },
-  {
-    path: 'users',
-    component: UsersComponent
-  }
+  ...UsersRoutes
 ];
 
 export const APP_ROUTER_PROVIDERS = [
