@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'profile',
+  // selector: 'profile',
   template: require('./profile.component.jade')
 })
 
