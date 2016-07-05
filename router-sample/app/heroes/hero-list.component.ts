@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { HeroService } from './hero.service';
-
+// TODO SOMEDAY: Feature Componetized like HeroCenter
+import { Component, OnInit }   from '@angular/core';
+import { Router }              from '@angular/router';
+import { Hero, HeroService }   from './hero.service';
 @Component({
   template: `
     <h2>HEROES</h2>
@@ -13,15 +13,14 @@ import { HeroService } from './hero.service';
     </ul>
   `
 })
-export class HeroListComponent {
-
+export class HeroListComponent implements OnInit {
+  heroes: Hero[];
   constructor(
-    private heroService: HeroService,
-    private router: Router
-  ) {
-
+    private router: Router,
+    private service: HeroService) { }
+  ngOnInit() {
+    this.service.getHeroes().then(heroes => this.heroes = heroes);
   }
-
   onSelect(hero: Hero) {
     this.router.navigate(['/hero', hero.id]);
   }
