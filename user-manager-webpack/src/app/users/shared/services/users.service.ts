@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { Http, URLSearchParams, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { User } from '../models';
 
@@ -23,6 +23,13 @@ export class UsersService {
 
   getUsers(): Observable<User[]> {
     return this.http.get(this.usersUrl)
+      .map(this.extractData);
+  }
+
+  getUser(id: string): Observable<User> {
+    let params: URLSearchParams = new URLSearchParams();
+    params.set('id', id);
+    return this.http.get(this.usersUrl, {search: params})
       .map(this.extractData);
   }
 }

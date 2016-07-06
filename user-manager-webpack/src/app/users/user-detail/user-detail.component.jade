@@ -1,0 +1,14 @@
+form.col-md-4(*ngIf="user")
+  div.form-group
+    label(for="userId") Id
+    input#userId.form-control(disabled [(ngModel)]="user.id")
+  div.form-group
+    label(for="userName") Username
+    input#userName.form-control([(ngModel)]="user.username")
+  div.form-group
+    label(for="userAddress") Address
+    input#userAddress.form-control([(ngModel)]="user.address")
+  div.form-group
+    label(for="userEmail") Email
+    input#userEmail.form-control([(ngModel)]="user.email")
+  button#add-edit-user.btn.btn-default(type="submit") Add user

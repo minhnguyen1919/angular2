@@ -1,9 +1,14 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, Input, OnInit, OnDestroy } from '@angular/core';
+import { ROUTER_DIRECTIVES } from '@angular/router';
+
 import { User, UsersService } from '../shared';
 
 @Component({
   selector: 'user-list',
-  template: require('./user-list.component.jade')
+  template: require('./user-list.component.jade'),
+  directives: [
+    ROUTER_DIRECTIVES
+  ]
 })
 
 export class UserListComponent implements OnInit {

@@ -12,5 +12,6 @@
         td {{user.username}}
         td {{user.address}}
         td {{user.email}}
-        td Edit
+        td
+          a([routerLink]="['/users', user.id]") Edit
         td Delete
