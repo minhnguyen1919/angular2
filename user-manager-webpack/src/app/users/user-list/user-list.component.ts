@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { UsersService } from '../shared';
 
 @Component({
@@ -22,7 +22,9 @@ export class UserListComponent implements OnInit {
   getUsers() {
     this.usersService.getUsers()
       .subscribe(
-        users => this.users,
+        users => {
+          this.users = users;
+        },
         errors => {
           console.log('error');
         }

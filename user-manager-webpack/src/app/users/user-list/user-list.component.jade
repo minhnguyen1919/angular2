@@ -1,0 +1,16 @@
+.table-responsive.col-md-8
+  table.table.table-striped
+    thead
+      tr
+        th User name
+        th Address
+        th Email
+        th Edit
+        th Delete
+    tbody
+      tr(*ngFor="let user of users")
+        td {{user.username}}
+        td {{user.address}}
+        td {{user.email}}
+        td Edit
+        td Delete

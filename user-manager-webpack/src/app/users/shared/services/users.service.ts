@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 
 export class UsersService {
-  private usersUrl = 'localhost:3000/users';
+  private usersUrl = 'http://localhost:3000/users';
 
   constructor(
     private http: Http) {
@@ -13,8 +13,7 @@ export class UsersService {
   }
 
   extractData(res: Response) {
-    let body = res.json();
-    return body.data || {};
+    return res.json();
   }
 
   handleError(error: any) {
