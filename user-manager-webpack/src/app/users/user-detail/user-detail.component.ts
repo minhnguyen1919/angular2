@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute } from '@angular/router'
+import { Router, ActivatedRoute } from '@angular/router'
 
 import { User, UsersService } from '../shared';
 
@@ -14,6 +14,7 @@ export class UserDetailComponent implements OnInit, OnDestroy {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private userService: UsersService) {
 
   }
@@ -34,6 +35,20 @@ export class UserDetailComponent implements OnInit, OnDestroy {
     //   .subscribe(
     //     user => this.user = user
     //   )
+  }
+
+  onSubmit() {
+    this.userService.save(this.user)
+      .subscribe(
+        user => {
+          console.log(user);
+          this.router.navigate(['/users']);
+        }
+      )
+  }
+
+  goBack() {
+    window.history.back();
   }
 
   ngOnDestroy() {

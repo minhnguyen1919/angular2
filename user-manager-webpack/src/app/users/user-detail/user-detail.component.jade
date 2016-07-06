@@ -11,4 +11,7 @@ form.col-md-4(*ngIf="user")
   div.form-group
     label(for="userEmail") Email
     input#userEmail.form-control([(ngModel)]="user.email")
-  button#add-edit-user.btn.btn-default(type="submit") Add user
+  //- button.btn.btn-default(type="submit") Update user
+  //- button.btn.btn-default(type="button") Cancel
+  a.btn.btn-default((click)="onSubmit()") Save user
+  a.btn.btn-default((click)="goBack()") Back
