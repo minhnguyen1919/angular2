@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { UsersService } from '../shared';
+import { User, UsersService } from '../shared';
 
 @Component({
   selector: 'user-list',
@@ -8,7 +8,7 @@ import { UsersService } from '../shared';
 
 export class UserListComponent implements OnInit {
 
-  private users: Array<any>;
+  private users: Array<User>;
 
   constructor(
     private usersService: UsersService) {
