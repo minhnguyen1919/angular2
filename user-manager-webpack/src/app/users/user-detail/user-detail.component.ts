@@ -1,11 +1,13 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router'
+import { Router, ActivatedRoute } from '@angular/router';
 
 import { User, UsersService } from '../shared';
 
 @Component({
   selector: 'user-detail',
-  template: require('./user-detail.component.jade')
+  template: require('./user-detail.component.jade'),
+  directives: [
+  ]
 })
 
 export class UserDetailComponent implements OnInit, OnDestroy {
@@ -41,7 +43,6 @@ export class UserDetailComponent implements OnInit, OnDestroy {
     this.userService.save(this.user)
       .subscribe(
         user => {
-          console.log(user);
           this.router.navigate(['/users']);
         }
       )

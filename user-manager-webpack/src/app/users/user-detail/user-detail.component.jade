@@ -1,17 +1,25 @@
-form.col-md-4(*ngIf="user")
-  div.form-group
-    label(for="userId") Id
-    input#userId.form-control(disabled [(ngModel)]="user.id")
-  div.form-group
-    label(for="userName") Username
-    input#userName.form-control([(ngModel)]="user.username")
-  div.form-group
-    label(for="userAddress") Address
-    input#userAddress.form-control([(ngModel)]="user.address")
-  div.form-group
-    label(for="userEmail") Email
-    input#userEmail.form-control([(ngModel)]="user.email")
-  //- button.btn.btn-default(type="submit") Update user
-  //- button.btn.btn-default(type="button") Cancel
-  a.btn.btn-default((click)="onSubmit()") Save user
-  a.btn.btn-default((click)="goBack()") Back
+div(*ngIf="user")
+  form.col-md-4((ngSubmit)="onSubmit(f.value)" #f="ngForm")
+    div.form-group
+      label(for="userId") Id
+      input#userId.form-control(disabled [(ngModel)]="user.id" name="id")
+    div.form-group
+      label(for="userName") Username
+      input#userName.form-control([(ngModel)]="user.username" ngControl="username" required name="username" #username="ngForm")
+      div([hidden]="username.valid || username.pristine" class="alert alert-danger")
+        | Name is required
+    div.form-group
+      label(for="userAddress") Address
+      input#userAddress.form-control([(ngModel)]="user.address" required ngControl="address" name="address" #address="ngForm")
+      div([hidden]="address.valid || address.pristine" class="alert alert-danger")
+        | Address is required
+    div.form-group
+      label(for="userAge") Age
+      input#userAge.form-control([(ngModel)]="user.age" pattern="[0-9]{2}" ngControl="age" name="age" #age="ngForm")
+      div([hidden]="age.valid || age.pristine" class="alert alert-danger")
+        | Age is invalid
+    div.form-group
+      label(for="userEmail") Email
+      input#userEmail.form-control([(ngModel)]="user.email" name="email")
+    button.btn.btn-default(type="submit") Update user
+    button.btn.btn-default(type="button") Cancel

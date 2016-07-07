@@ -4,6 +4,7 @@
       tr
         th User name
         th Address
+        th Age
         th Email
         th Edit
         th Delete
@@ -11,6 +12,7 @@
       tr(*ngFor="let user of users")
         td {{user.username}}
         td {{user.address}}
+        td {{user.age}}
         td {{user.email}}
         td
           a([routerLink]="['/users', user.id]") Edit
