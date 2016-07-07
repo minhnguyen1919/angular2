@@ -4,8 +4,8 @@ import {
   FORM_DIRECTIVES,
   REACTIVE_FORM_DIRECTIVES,
   FormBuilder,
+  FormControl,
   FormGroup,
-  AbstractControl,
   Validators
 } from '@angular/forms';
 
@@ -21,31 +21,40 @@ import { User, UsersService } from '../shared';
 })
 
 export class NewUserComponent implements OnInit {
-  user: User = new User();
   addUserForm: FormGroup;
-  username: AbstractControl;
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     private userService: UsersService,
     private formBuilder: FormBuilder) {
-    this.addUserForm = this.formBuilder.group({
-      'username': ['', Validators.required]
-    });
 
-    this.username = this.addUserForm.controls['username'];
   }
 
-  ngOnInit() {
+  ageValidator(control: FormControl): { [s: string]: boolean } {
+    if (!control.value.match(/[0-9]{2}/) || control.value < 18 || control.value > 120) {
+      return {invalidAge: true};
+    }
 
+  }
+
+  emailValidator(control: FormControl): { [s: string]: boolean } {
+    if (!control.value.match(/^[_a-zA-Z0-9]+(\.[_a-zA-Z0-9]+)*@[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*(\.[a-zA-Z0-9]{2,63})+$/)) {
+      return {invalidEmail: true};
+    }
+  }
+
+
+  ngOnInit() {
+    this.addUserForm = this.formBuilder.group({
+      'username': ['', Validators.compose([Validators.required, Validators.minLength(5), Validators.pattern('[a-zA-Z ]*')])],
+      'address': [''],
+      'email': ['', Validators.compose([Validators.required, this.emailValidator])],
+      'age': ['', this.ageValidator]
+    });
   }
 
   onSubmit(value:any) {
     console.log(value);
-  }
-
-  test() {
-    console.log(this.username);
   }
 }
