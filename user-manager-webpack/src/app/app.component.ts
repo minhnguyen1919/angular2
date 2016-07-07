@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import './rxjs-operators';
 
-import '../../public/css/styles.css';
+import '../../public/css/styles.scss';
 
 import {
   HeaderComponent,
