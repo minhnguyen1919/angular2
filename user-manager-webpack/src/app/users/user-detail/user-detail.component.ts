@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { FORM_DIRECTIVES } from '@angular/forms';
 
 import { User, UsersService } from '../shared';
 
@@ -7,6 +8,7 @@ import { User, UsersService } from '../shared';
   selector: 'user-detail',
   template: require('./user-detail.component.jade'),
   directives: [
+    FORM_DIRECTIVES
   ]
 })
 

@@ -1,19 +1,24 @@
 div
-  form.col-md-4((ngSubmit)="onSubmit(f.value)" #f="ngForm")
-    div.form-group
-      label(for="userId") Id
-      input#userId.form-control(disabled [(ngModel)]="user.id" name="id")
+  form.col-md-4([formGroup]="addUserForm", (ngSubmit)="onSubmit(addUserForm.value)")
+    //- div.form-group
+    //-   label(for="userId") Id
+    //-   input#userId.form-control()
     div.form-group
       label(for="userName") Username
-      input#userName.form-control([(ngModel)]="user.username" ngControl="username" required name="username" #username="ngForm")
-    div.form-group
-      label(for="userAddress") Address
-      input#userAddress.form-control([(ngModel)]="user.address" required ngControl="address" name="address" #address="ngForm")
-    div.form-group
-      label(for="userAge") Age
-      input#userAge.form-control([(ngModel)]="user.age" pattern="[0-9]{2}" ngControl="age" name="age" #age="ngForm")
-    div.form-group
-      label(for="userEmail") Email
-      input#userEmail.form-control([(ngModel)]="user.email" name="email")
-    button.btn.btn-default(type="submit") Update user
+      input#userName.form-control(type="text", [formControl]="username")
+      div(*ngIf="username.hasError('required')", class="alert alert-danger")
+        | Name is invalid
+    //- div.form-group
+    //-   label(for="userAddress") Address
+    //-   input#userAddress.form-control()
+    //- div.form-group
+    //-   label(for="userAge") Age
+    //-   input#userAge.form-control()
+    //- div.form-group
+    //-   label(for="userEmail") Email
+    //-   input#userEmail.form-control()
+    div(*ngIf="!addUserForm.valid", class="alert alert-danger")
+      | Form is invalid
+    button.btn.btn-default(type="submit") Add user
     button.btn.btn-default(type="button") Cancel
+    a((click)="test()") Test

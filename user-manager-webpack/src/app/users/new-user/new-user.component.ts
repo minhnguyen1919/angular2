@@ -4,7 +4,9 @@ import {
   FORM_DIRECTIVES,
   REACTIVE_FORM_DIRECTIVES,
   FormBuilder,
-  FormGroup
+  FormGroup,
+  AbstractControl,
+  Validators
 } from '@angular/forms';
 
 import { User, UsersService } from '../shared';
@@ -20,19 +22,30 @@ import { User, UsersService } from '../shared';
 
 export class NewUserComponent implements OnInit {
   user: User = new User();
+  addUserForm: FormGroup;
+  username: AbstractControl;
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private userService: UsersService) {
+    private userService: UsersService,
+    private formBuilder: FormBuilder) {
+    this.addUserForm = this.formBuilder.group({
+      'username': ['', Validators.required]
+    });
 
+    this.username = this.addUserForm.controls['username'];
   }
 
   ngOnInit() {
 
   }
 
-  onSubmit() {
+  onSubmit(value:any) {
+    console.log(value);
+  }
 
+  test() {
+    console.log(this.username);
   }
 }
