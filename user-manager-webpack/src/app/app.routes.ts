@@ -1,5 +1,6 @@
 import { provideRouter, RouterConfig } from '@angular/router';
 
+import { LoginRoutes, AUTH_PROVIDERS } from './login';
 import { UsersRoutes } from './users';
 import { ProfileComponent } from './profile';
 
@@ -10,10 +11,12 @@ export const routes: RouterConfig = [
     path: '',
     component: ProfileComponent
   },
-  ...UsersRoutes
+  ...UsersRoutes,
+  ...LoginRoutes
 ];
 
 export const APP_ROUTER_PROVIDERS = [
   provideRouter(routes),
-  CanDeactivateGuard
+  CanDeactivateGuard,
+  AUTH_PROVIDERS
 ];

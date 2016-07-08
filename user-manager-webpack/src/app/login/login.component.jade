@@ -1,0 +1,6 @@
+h2 LOGIN
+ p {{message}}
+ p
+   button((click)='login()', *ngif='!authService.isLoggedIn') Login
+   button((click)='logout()', *ngif='authService.isLoggedIn') Logout
+ | `
