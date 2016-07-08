@@ -1,7 +1,8 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
 import { Http, Headers, URLSearchParams, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { User } from '../models';
+import { APP_CONFIG, AppConfig } from '../../../app.config';
 
 let headers = new Headers({
   'Content-type': 'application/json'
@@ -10,11 +11,12 @@ let headers = new Headers({
 @Injectable()
 
 export class UsersService {
-  private usersUrl = 'http://localhost:3000/users';
+  private usersUrl: string;
 
   constructor(
-    private http: Http) {
-
+    private http: Http,
+    @Inject(APP_CONFIG) private config: AppConfig) {
+    this.usersUrl = this.config.apiEndpoint + '/users';
   }
 
   extractData(res: Response) {
