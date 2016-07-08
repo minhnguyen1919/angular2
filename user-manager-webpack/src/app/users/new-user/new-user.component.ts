@@ -10,10 +10,19 @@ import {
 } from '@angular/forms';
 
 // main shared
-import { IndicatorComponent, FirstKeyPipe } from '../../shared';
+import {
+  IndicatorComponent,
+  FirstKeyPipe,
+  MessagesService
+} from '../../shared';
 
 // user shared
-import { User, UsersService } from '../shared';
+import {
+  User,
+  UsersService
+} from '../shared';
+
+import { APP_CONSTANT } from '../../app.constant';
 
 @Component({
   selector: 'new-user',
@@ -37,6 +46,7 @@ export class NewUserComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private userService: UsersService,
+    private messageService: MessagesService,
     private formBuilder: FormBuilder) {
 
   }
@@ -92,12 +102,13 @@ export class NewUserComponent implements OnInit {
       this.userService.save(value)
         .subscribe(
           user => {
-            console.log(user);
+            console.log(APP_CONSTANT.messages.user.add.success);
+            console.log(this.messageService.invalid('name'));
             this.isLoading = false;
             this.router.navigate(['/users']);
           },
           error => {
-            console.log('error');
+            console.log(APP_CONSTANT.messages.user.add.fail);
             this.isLoading = false;
           }
         )

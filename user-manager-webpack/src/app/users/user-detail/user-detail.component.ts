@@ -3,6 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { FORM_DIRECTIVES } from '@angular/forms';
 
 import { User, UsersService } from '../shared';
+import { APP_CONSTANT } from '../../app.constant';
 
 @Component({
   selector: 'user-detail',
@@ -45,6 +46,7 @@ export class UserDetailComponent implements OnInit, OnDestroy {
     this.userService.save(this.user)
       .subscribe(
         user => {
+          console.log(APP_CONSTANT.messages.user.edit.success);
           this.router.navigate(['/users']);
         }
       )

@@ -2,32 +2,32 @@ div
   form.col-md-4([formGroup]="addUserForm", (ngSubmit)="onSubmit(addUserForm.value)")
     div.form-group
       label(for="userName") Username
-      input#userName.form-control(type="text", [formControl]="addUserForm.controls['username']")
+      input#userName.form-control(type="text", [formControl]="addUserForm.controls['username']", [disabled]="isLoading")
       div(*ngIf="submitted && (addUserForm.controls['username'].errors | firstKey) === 'required'", class="alert alert-danger")
-        | Name is required
+        | {{messageService.required('Name')}}
       div(*ngIf="submitted && (addUserForm.controls['username'].errors | firstKey) === 'minlength'", class="alert alert-danger")
-        | Name is invalid
+        | {{messageService.invalid('Name')}}
       div(*ngIf="submitted && (addUserForm.controls['username'].errors | firstKey) === 'pattern'", class="alert alert-danger")
         | Name is only character
 
     div.form-group
       label(for="userAddress") Address
-      input#userAddress.form-control(type="text", [formControl]="addUserForm.controls['address']")
+      input#userAddress.form-control(type="text", [formControl]="addUserForm.controls['address']", [disabled]="isLoading")
 
     div.form-group
       label(for="userAge") Age
-      input#userAge.form-control(type="text", [formControl]="addUserForm.controls['age']")
+      input#userAge.form-control(type="text", [formControl]="addUserForm.controls['age']", [disabled]="isLoading")
       div(*ngIf="submitted && addUserForm.controls['age'].hasError('invalidAge')", class="alert alert-danger")
-        | Age is invalid
+        | {{messageService.invalid('Age')}}
 
     div.form-group
       label(for="userEmail") Email
-      input#userEmail.form-control(type="text", [formControl]="addUserForm.controls['email']")
+      input#userEmail.form-control(type="text", [formControl]="addUserForm.controls['email']", [disabled]="isLoading")
       div(*ngIf="submitted && (addUserForm.controls['email'].errors | firstKey) === 'required'", class="alert alert-danger")
-        | Email is required
+        | {{messageService.required('Email')}}
       div(*ngIf="submitted && (addUserForm.controls['email'].errors | firstKey) === 'invalidEmail'", class="alert alert-danger")
-        | Email is invalid
+        | {{messageService.invalid('Email')}}
 
-    button.btn.btn-default(type="submit") Add user
-    button.btn.btn-default(type="button") Cancel
+    button.btn.btn-default(type="submit", [disabled]="isLoading") Add user
+    button.btn.btn-default(type="button", [disabled]="isLoading") Cancel
 indicator(*ngIf="isLoading")

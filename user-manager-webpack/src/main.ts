@@ -10,6 +10,8 @@ import {
   APP_ROUTER_PROVIDERS
 } from './app';
 
+import { MessagesService } from './app/shared';
+
 if (process.env.ENV === 'production') {
   enableProdMode();
 }
@@ -19,5 +21,6 @@ bootstrap(AppComponent, [
   HTTP_PROVIDERS,
   JSONP_PROVIDERS,
   provideForms(),
-  { provide: APP_CONFIG, useValue: USER_DI_CONFIG }
+  { provide: APP_CONFIG, useValue: USER_DI_CONFIG },
+  MessagesService
 ]);
