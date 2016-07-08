@@ -1,9 +1,13 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FORM_DIRECTIVES } from '@angular/forms';
+import { Observable } from 'rxjs/Observable';
 
+import { DialogService } from '../../shared';
 import { User, UsersService } from '../shared';
 import { APP_CONSTANT } from '../../app.constant';
+
+import * as _ from 'lodash';
 
 @Component({
   selector: 'user-detail',
@@ -16,12 +20,13 @@ import { APP_CONSTANT } from '../../app.constant';
 export class UserDetailComponent implements OnInit, OnDestroy {
   private sub: any;
   user: User;
+  originalUser: User;
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private userService: UsersService) {
-
+    private userService: UsersService,
+    private dialogService: DialogService) {
   }
 
   ngOnInit() {
@@ -30,7 +35,10 @@ export class UserDetailComponent implements OnInit, OnDestroy {
       let id = params['id'];
       this.userService.getUser(id)
         .subscribe(
-          user => this.user = user
+          user => {
+            this.user = user;
+            this.originalUser = _.clone(user);
+          }
         )
     })
 
@@ -50,6 +58,17 @@ export class UserDetailComponent implements OnInit, OnDestroy {
           this.router.navigate(['/users']);
         }
       )
+  }
+
+  canDeactivate(): Observable<boolean> | boolean {
+    if (_.isEqual(this.originalUser, this.user)) {
+      return true
+    }
+
+    let p = this.dialogService.confirm('Discard changes?');
+    let o = Observable.fromPromise(p);
+
+    return o;
   }
 
   goBack() {

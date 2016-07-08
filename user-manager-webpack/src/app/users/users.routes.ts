@@ -4,6 +4,8 @@ import { NewUserComponent } from './new-user';
 import { UserDetailComponent } from './user-detail';
 import { UsersComponent } from './users.component';
 
+import { CanDeactivateGuard } from '../interfaces';
+
 export const UsersRoutes: RouterConfig = [
   {
     path: 'users',
@@ -19,7 +21,8 @@ export const UsersRoutes: RouterConfig = [
       },
       {
         path: ':id',
-        component: UserDetailComponent
+        component: UserDetailComponent,
+        canDeactivate: [CanDeactivateGuard]
       }
     ]
   }
