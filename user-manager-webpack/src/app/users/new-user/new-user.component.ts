@@ -10,7 +10,7 @@ import {
 } from '@angular/forms';
 
 // main shared
-import { IndicatorComponent } from '../../shared';
+import { IndicatorComponent, FirstKeyPipe } from '../../shared';
 
 // user shared
 import { User, UsersService } from '../shared';
@@ -22,12 +22,16 @@ import { User, UsersService } from '../shared';
     FORM_DIRECTIVES,
     REACTIVE_FORM_DIRECTIVES,
     IndicatorComponent
+  ],
+  pipes: [
+    FirstKeyPipe
   ]
 })
 
 export class NewUserComponent implements OnInit {
   addUserForm: FormGroup;
   isLoading: boolean = false;
+  submitted: boolean = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -76,6 +80,8 @@ export class NewUserComponent implements OnInit {
   }
 
   onSubmit(value:any) {
+    this.submitted = true;
+
     if (!this.addUserForm.valid) {
       return;
     }

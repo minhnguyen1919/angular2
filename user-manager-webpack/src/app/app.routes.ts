@@ -5,7 +5,7 @@ import { ProfileComponent } from './profile';
 
 export const routes: RouterConfig = [
   {
-    path: 'profile',
+    path: '',
     component: ProfileComponent
   },
   ...UsersRoutes
