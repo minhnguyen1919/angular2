@@ -2,15 +2,12 @@ import { provideRouter, RouterConfig } from '@angular/router';
 
 import { LoginRoutes, AUTH_PROVIDERS } from './login';
 import { UsersRoutes } from './users';
-import { ProfileComponent } from './profile';
+import { ProfileRoutes } from './profile';
 
 import { CanDeactivateGuard } from './interfaces';
 
 export const routes: RouterConfig = [
-  {
-    path: '',
-    component: ProfileComponent
-  },
+  ...ProfileRoutes,
   ...UsersRoutes,
   ...LoginRoutes
 ];
