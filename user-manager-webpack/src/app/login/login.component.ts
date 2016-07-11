@@ -16,7 +16,7 @@ export class LoginComponent {
 
   login() {
     this.authService.login().subscribe(() => {
-      this.router.navigate(['/dashboard']);
+      this.router.navigate(['/']);
     });
   }
 

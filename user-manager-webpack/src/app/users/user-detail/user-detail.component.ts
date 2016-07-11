@@ -51,6 +51,8 @@ export class UserDetailComponent implements OnInit, OnDestroy {
   }
 
   onSubmit() {
+    this.originalUser = _.clone(this.user);
+
     this.userService.save(this.user)
       .subscribe(
         user => {
@@ -71,7 +73,7 @@ export class UserDetailComponent implements OnInit, OnDestroy {
     return o;
   }
 
-  goBack() {
+  cancel() {
     window.history.back();
   }
 

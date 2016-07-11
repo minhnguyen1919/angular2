@@ -22,4 +22,4 @@ div(*ngIf="user")
       label(for="userEmail") Email
       input#userEmail.form-control([(ngModel)]="user.email" name="email")
     button.btn.btn-default(type="submit") Update user
-    button.btn.btn-default(type="button") Cancel
+    button.btn.btn-default(type="button", (click)="cancel()") Cancel
