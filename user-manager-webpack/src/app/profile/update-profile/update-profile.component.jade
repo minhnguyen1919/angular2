@@ -19,24 +19,7 @@ div.text-left
           input#gender(type="radio", name="gender", value="female")
           | Female
 
-    div.form-inline.row
-      label Date of birth
-      div.col-md-offset-2
-        .form-group.col-sm-4
-          select.form-control
-            option 12
-            option 13
-            option 14
-        .form-group.col-sm-4
-          select.form-control
-            option 10
-            option 11
-            option 12
-        .form-group.col-sm-4
-          select.form-control
-            option 1990
-            option 1991
-            option 1992
+    date-of-birth([dateOfBirth]="profile.dateOfBirth")
 
     div.form-group
       label(for="email") Email

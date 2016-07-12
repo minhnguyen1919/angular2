@@ -1,4 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core'
+import { Component, OnInit, Input } from '@angular/core';
+
+import * as moment from 'moment';
 
 @Component({
   selector: 'date-of-birth',
@@ -8,7 +10,11 @@ import { Component, OnInit, Input } from '@angular/core'
 export class DateOfBirthComponent implements OnInit {
   @Input('dateOfBirth') dateOfBirth: any;
 
-  birthDate: Object;
+  birthDate: any;
+
+  error: any = {
+    isValid: true
+  };
 
   constructor() {
 
@@ -22,14 +28,23 @@ export class DateOfBirthComponent implements OnInit {
     }
   }
 
+  checkAge(newValue: any) {
+    console.log(newValue);
+    console.log(this.birthDate);
+    var momentDate = moment(this.birthDate.date + this.birthDate.month + this.birthDate.year, 'DDMMYYYY');
+
+    this.error.isValid = momentDate.isValid();
+    console.log(this.error.isValid);
+  }
+
   /**
     * generate list integer number from {begin} to {end}
     */
   generateNumberList(begin: number, end: number, isRevert: boolean) {
-    var result: Array<number> = [];
+    var result: Array<string> = [];
 
     for(let i = begin; i <= end; i++) {
-      result.push(i);
+      result.push((i.toString().length === 1 ? '0' : '') + i.toString());
     }
 
     return isRevert? result.reverse(): result;

@@ -1,6 +1,7 @@
-.col-xs-6.col-sm-3.placeholder
+.col-md-4.col-xs-6.col-sm-3.placeholder
   img.img-responsive(data-src='holder.js/200x200/auto/sky', alt='200x200', src='public/images/user.png', data-holder-rendered='true')
   h4 Administrator
-  span.text-muted Minh Nguyen
+  span.text-muted {{profile?.username}}
 
-a([routerLink]="['/update']") Update profile
+.col-md-8.col-xs-6.col-sm-3
+  update-profile([profile]="profile")
