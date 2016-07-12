@@ -1,0 +1,12 @@
+div.form-inline(*ngIf="birthDate")
+  label Date of birth
+  div.col-md-offset-2
+    .form-group.col-sm-4
+      select.form-control([(ngModel)]="birthDate.date")
+        option(*ngFor="let i of generateNumberList(1, 30, false)", [attr.selected]="birthDate.date == i ? true: null") {{i}}
+    .form-group.col-sm-4
+      select.form-control
+        option(*ngFor="let i of generateNumberList(1, 12, false)", [attr.selected]="birthDate.month == i ? true: null") {{i}}
+    .form-group.col-sm-4
+      select.form-control
+        option(*ngFor="let i of generateNumberList(1900, 2016, true)", [attr.selected]="birthDate.year == i ? true: null") {{i}}
