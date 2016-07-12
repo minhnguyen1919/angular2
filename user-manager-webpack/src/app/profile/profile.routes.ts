@@ -1,8 +1,6 @@
 import { RouterConfig } from '@angular/router';
 
 import { ProfileComponent } from './profile.component';
-import { ProfileInfoComponent } from './profile-info';
-import { UpdateProfileComponent } from './update-profile';
 
 export const ProfileRoutes: RouterConfig = [
   {
@@ -11,16 +9,6 @@ export const ProfileRoutes: RouterConfig = [
   },
   {
     path: 'profile',
-    component: ProfileComponent,
-    children: [
-      {
-        path: '',
-        component: ProfileInfoComponent,
-      },
-      {
-        path: 'update',
-        component: UpdateProfileComponent
-      }
-    ]
+    component: ProfileComponent
   }
 ];

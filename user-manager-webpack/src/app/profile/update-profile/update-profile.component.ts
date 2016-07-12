@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
+import { Profile } from '../shared';
 
 @Component({
   selector: 'update-profile',
@@ -6,5 +8,6 @@ import { Component } from '@angular/core';
 })
 
 export class UpdateProfileComponent {
+  @Input('profile') profile: Profile;
 
 }
