@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, Input } from '@angular/core';
 
 import * as moment from 'moment';
 
@@ -12,6 +12,7 @@ import * as moment from 'moment';
 
 export class DateOfBirthComponent implements OnInit {
   @Input('dateOfBirth') dateOfBirth: any;
+  @Output() dateChange = new EventEmitter;
 
   birthDate: any;
 
@@ -33,7 +34,9 @@ export class DateOfBirthComponent implements OnInit {
   }
 
   checkAge(newValue: any) {
-    var momentDate = moment(this.birthDate.date + this.birthDate.month + this.birthDate.year, 'DDMMYYYY');
+    this.dateOfBirth = `${this.birthDate.date}-${this.birthDate.month}-${this.birthDate.year}`;
+
+    var momentDate = moment(this.dateOfBirth, 'DD-MM-YYYY');
 
     this.error.isValidDate = momentDate.isValid();
   }
