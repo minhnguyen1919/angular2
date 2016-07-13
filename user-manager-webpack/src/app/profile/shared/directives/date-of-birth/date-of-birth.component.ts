@@ -12,7 +12,7 @@ import * as moment from 'moment';
 
 export class DateOfBirthComponent implements OnInit {
   @Input('dateOfBirth') dateOfBirth: any;
-  @Output() dateChange = new EventEmitter;
+  @Output() dateChanged = new EventEmitter;
 
   birthDate: any;
 
@@ -33,12 +33,19 @@ export class DateOfBirthComponent implements OnInit {
     }
   }
 
-  checkAge(newValue: any) {
+  checkAge() {
     this.dateOfBirth = `${this.birthDate.date}-${this.birthDate.month}-${this.birthDate.year}`;
 
     var momentDate = moment(this.dateOfBirth, 'DD-MM-YYYY');
 
     this.error.isValidDate = momentDate.isValid();
+
+    this.dateChanged.emit({
+      dateOfBirth: this.dateOfBirth,
+      isValid: momentDate.isValid()
+    });
+
+    console.log('change date');
   }
 
   /**

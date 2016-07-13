@@ -21,7 +21,7 @@ div.text-left
           input#gender(type="radio", name="gender", value="female")
           | Female
 
-    date-of-birth([dateOfBirth]="profile.dateOfBirth")
+    date-of-birth([dateOfBirth]="profile.dateOfBirth", (dateChanged)="dateChanged($event)")
 
     div.form-group
       label(for="email") Email

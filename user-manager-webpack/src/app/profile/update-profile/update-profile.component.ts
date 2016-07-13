@@ -46,8 +46,19 @@ export class UpdateProfileComponent implements OnInit {
     })
   }
 
+  /**
+    * update date of birth data from dateOfBirth directive
+    * set error to form if date is invalid
+    */
+  dateChanged(data: any) {
+    this.profile.dateOfBirth = data.dateOfBirth;
+    this.profileForm.controls['dateOfBirth'].setErrors(data.isValid ? null : {'invalid': true});
+  }
+
   onSubmit() {
     this.submitted = true;
+
+    console.log(this.profileForm.valid);
   }
 }
 
