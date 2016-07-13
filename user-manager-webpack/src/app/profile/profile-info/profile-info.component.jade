@@ -2,6 +2,21 @@
   img.img-responsive(data-src='holder.js/200x200/auto/sky', alt='200x200', src='public/images/user.png', data-holder-rendered='true')
   h4 Administrator
   span.text-muted {{profile?.username}}
+  .row
+    p.col-md-4 First Name
+    p.col-md-6 {{profile?.firstName}}
+  .row
+    p.col-md-4 Last Name
+    p.col-md-6 {{profile?.lastName}}
+  .row
+    p.col-md-4 Gender
+    p.col-md-6 {{profile?.gender}}
+  .row
+    p.col-md-4 Date Of Birth
+    p.col-md-6 {{profile?.dateOfBirth}}
+  .row
+    p.col-md-4 Email
+    p.col-md-6 {{profile?.email}}
 
 a(href="javascript:void(0);", (click)="updateProfile()", *ngIf="!isShowUpdate") Update profile
 .col-md-8.col-xs-6.col-sm-3(*ngIf="isShowUpdate")

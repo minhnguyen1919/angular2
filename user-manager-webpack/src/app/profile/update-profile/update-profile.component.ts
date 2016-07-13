@@ -37,12 +37,12 @@ export class UpdateProfileComponent implements OnInit {
 
   ngOnInit() {
     this.profileForm = this.formBuilder.group({
-      'username': ['', Validators.required],
-      'firstName': [''],
-      'lastName': [''],
-      'gender': [''],
-      'dateOfBirth': [''],
-      'email': ['']
+      'username': [this.profile.username, Validators.required],
+      'firstName': [this.profile.firstName],
+      'lastName': [this.profile.lastName],
+      'gender': [this.profile.gender],
+      'dateOfBirth': [this.profile.dateOfBirth],
+      'email': [this.profile.email]
     })
   }
 
