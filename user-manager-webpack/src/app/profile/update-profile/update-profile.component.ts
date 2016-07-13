@@ -14,7 +14,5 @@ export class UpdateProfileComponent {
   @Input('profile') profile: Profile;
 
   constructor() {
-    console.log('profile');
-    console.log(this.profile);
   }
 }

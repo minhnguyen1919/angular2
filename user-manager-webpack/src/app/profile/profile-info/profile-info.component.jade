@@ -3,5 +3,6 @@
   h4 Administrator
   span.text-muted {{profile?.username}}
 
-.col-md-8.col-xs-6.col-sm-3
+a(href="javascript:void(0);", (click)="updateProfile()", *ngIf="!isShowUpdate") Update profile
+.col-md-8.col-xs-6.col-sm-3(*ngIf="isShowUpdate")
   update-profile([profile]="profile")

@@ -1,7 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ROUTER_DIRECTIVES } from '@angular/router';
+import { Router, ROUTER_DIRECTIVES } from '@angular/router';
 import { Profile } from '../shared';
 import { UpdateProfileComponent } from '../update-profile';
+
+import { AuthService } from '../../login';
 
 @Component({
   selector: 'profile-info',
@@ -14,8 +16,11 @@ import { UpdateProfileComponent } from '../update-profile';
 
 export class ProfileInfoComponent implements OnInit {
   profile: Profile;
+  isShowUpdate: boolean = false;
 
-  constructor() {
+  constructor(
+    private authService: AuthService,
+    private router: Router) {
 
   }
 
@@ -28,6 +33,15 @@ export class ProfileInfoComponent implements OnInit {
       gender: 'male',
       email: 'minh.nguyen@asnet.com.vn'
     }
+  }
+
+  updateProfile() {
+    if (this.authService.isLoggedIn) {
+      this.isShowUpdate = true;
+      return;
+    }
+
+    this.router.navigate(['/login']);
   }
 
 }

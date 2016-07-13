@@ -4,7 +4,10 @@ import * as moment from 'moment';
 
 @Component({
   selector: 'date-of-birth',
-  template: require('./date-of-birth.component.jade')
+  template: require('./date-of-birth.component.jade'),
+  styles: [
+    require('./date-of-birth.component.css')
+  ]
 })
 
 export class DateOfBirthComponent implements OnInit {
@@ -13,7 +16,8 @@ export class DateOfBirthComponent implements OnInit {
   birthDate: any;
 
   error: any = {
-    isValid: true
+    isValidDate: true,
+    isValidAge: true
   };
 
   constructor() {
@@ -29,12 +33,9 @@ export class DateOfBirthComponent implements OnInit {
   }
 
   checkAge(newValue: any) {
-    console.log(newValue);
-    console.log(this.birthDate);
     var momentDate = moment(this.birthDate.date + this.birthDate.month + this.birthDate.year, 'DDMMYYYY');
 
-    this.error.isValid = momentDate.isValid();
-    console.log(this.error.isValid);
+    this.error.isValidDate = momentDate.isValid();
   }
 
   /**
