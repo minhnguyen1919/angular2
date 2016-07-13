@@ -34,12 +34,16 @@ export class DateOfBirthComponent implements OnInit {
   }
 
   checkAge() {
+
+    // re-create date of birth string from date that user select
     this.dateOfBirth = `${this.birthDate.date}-${this.birthDate.month}-${this.birthDate.year}`;
 
     var momentDate = moment(this.dateOfBirth, 'DD-MM-YYYY');
 
+    // check date valid
     this.error.isValidDate = momentDate.isValid();
 
+    // emit event to component that use this directive to update data and error status
     this.dateChanged.emit({
       dateOfBirth: this.dateOfBirth,
       isValid: momentDate.isValid()

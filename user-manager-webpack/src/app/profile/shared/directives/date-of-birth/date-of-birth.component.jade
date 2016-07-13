@@ -2,13 +2,13 @@ div.form-inline(*ngIf="birthDate")
   label Date of birth
   div.col-md-offset-2.overflow-hidden
     .form-group.col-sm-4
-      select.form-control([ngModel]="birthDate.date", (ngModelChange)="birthDate.date=$event; checkAge()")
+      select.form-control([ngModel]="birthDate.date", #date, (change)="birthDate.date = date.value; checkAge()")
         option(*ngFor="#i of generateNumberList(1, 31, false)", [attr.selected]="birthDate.date === i ? true : null") {{i}}
     .form-group.col-sm-4
-      select.form-control([ngModel]="birthDate.month", (ngModelChange)="birthDate.month=$event; checkAge()")
-        option(*ngFor="#i of generateNumberList(1, 12, false)") {{i}}
+      select.form-control([ngModel]="birthDate.month", #month, (change)="birthDate.month=month.value; checkAge()")
+        option(*ngFor="#i of generateNumberList(1, 12, false)", [attr.selected]="birthDate.month === i ? true : null") {{i}}
     .form-group.col-sm-4
-      select.form-control([ngModel]="birthDate.year", (ngModelChange)="birthDate.year=$event; checkAge()")
-        option(*ngFor="#i of generateNumberList(1900, 2016, true)") {{i}}
+      select.form-control([ngModel]="birthDate.year", #year, (change)="birthDate.year=year.value; checkAge()")
+        option(*ngFor="#i of generateNumberList(1900, 2016, true)", [attr.selected]="birthDate.year === i ? true : null") {{i}}
   div(*ngIf="!error.isValidDate", class="alert alert-danger")
     | Date of birth is invalid

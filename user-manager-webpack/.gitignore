@@ -4,8 +4,8 @@ bower_components/
 .idea/
 .tmp/
 dist/
-app/**/*.js
-app/**/*.js.map
+src/**/*.js
+src/**/*.js.map
 typings/
 npm-debug.log
 .babelrc
