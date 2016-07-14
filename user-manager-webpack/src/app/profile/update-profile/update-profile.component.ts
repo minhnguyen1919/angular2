@@ -12,6 +12,8 @@ import { Profile, DateOfBirthComponent } from '../shared';
 
 import { FirstKeyPipe, MessagesService } from '../../shared';
 
+import * as _ from 'lodash';
+
 @Component({
   selector: 'update-profile',
   template: require('./update-profile.component.jade'),
@@ -27,6 +29,7 @@ import { FirstKeyPipe, MessagesService } from '../../shared';
 
 export class UpdateProfileComponent implements OnInit {
   @Input('profile') profile: Profile;
+  editProfile: Profile;
   profileForm: FormGroup;
   submitted: boolean = false;
 
@@ -36,29 +39,21 @@ export class UpdateProfileComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.editProfile = _.clone(this.profile);
     this.profileForm = this.formBuilder.group({
-      'username': [this.profile.username, Validators.required],
-      'firstName': [this.profile.firstName],
-      'lastName': [this.profile.lastName],
-      'gender': [this.profile.gender],
-      'dateOfBirth': [this.profile.dateOfBirth],
-      'email': [this.profile.email]
+      'username': [this.editProfile.username, Validators.required],
+      'firstName': [this.editProfile.firstName],
+      'lastName': [this.editProfile.lastName],
+      'gender': [this.editProfile.gender],
+      'email': [this.editProfile.email]
     })
   }
 
-  /**
-    * update date of birth data from dateOfBirth directive
-    * set error to form if date is invalid
-    */
-  dateChanged(data: any) {
-    this.profile.dateOfBirth = data.dateOfBirth;
-    this.profileForm.controls['dateOfBirth'].setErrors(data.isValid ? null : {'invalid': true});
-  }
-
-  onSubmit() {
+  onSubmit(data: any) {
     this.submitted = true;
 
     console.log(this.profileForm.valid);
+    console.log(data);
   }
 }
 

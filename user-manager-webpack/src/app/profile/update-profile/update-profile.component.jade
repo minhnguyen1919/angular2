@@ -15,13 +15,13 @@ div.text-left
       label Gender
       div.col-md-offset-2
         label.radio-inline
-          input(type="radio",[(ngModel)]="profile.gender", name="gender", value="male")
+          input(type="radio",[formControl]="profileForm.controls['gender']" , name="gender", value="male")
           | Male
         label.radio-inline
-          input(type="radio",[(ngModel)]="profile.gender", name="gender", value="female")
+          input(type="radio",[formControl]="profileForm.controls['gender']" , name="gender", value="female")
           | Female
 
-    date-of-birth([dateOfBirth]="profile.dateOfBirth", (dateChanged)="dateChanged($event)")
+    date-of-birth([dateOfBirth]="profile.dateOfBirth", [form]="profileForm")
 
     div.form-group
       label(for="email") Email

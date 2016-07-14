@@ -1,4 +1,6 @@
 import { Component, EventEmitter, OnInit, Output, Input } from '@angular/core';
+import { FormGroup, AbstractControl, FormControl } from '@angular/forms';
+
 
 import * as moment from 'moment';
 
@@ -12,7 +14,9 @@ import * as moment from 'moment';
 
 export class DateOfBirthComponent implements OnInit {
   @Input('dateOfBirth') dateOfBirth: any;
-  @Output() dateChanged = new EventEmitter;
+  @Input('form') form: FormGroup;
+
+  dobControl: AbstractControl;
 
   birthDate: any;
 
@@ -26,30 +30,35 @@ export class DateOfBirthComponent implements OnInit {
   }
 
   ngOnInit() {
+    // create birthDate object from dateOfbirth string
     this.birthDate = {
       date: this.dateOfBirth.substring(0, 2),
       month: this.dateOfBirth.substring(3, 5),
       year: this.dateOfBirth.substring(6, 11)
     }
+
+    // add dateOfBirth formControl to form
+    this.form.addControl('dateOfBirth', new FormControl(this.dateOfBirth));
+
+    this.dobControl = this.form.controls['dateOfBirth'];
   }
 
+  /**
+    * validate date of birth after user change select box
+    * so error message if it is invalid
+    */
   checkAge() {
 
     // re-create date of birth string from date that user select
-    this.dateOfBirth = `${this.birthDate.date}-${this.birthDate.month}-${this.birthDate.year}`;
+    let dateOfBirth = `${this.birthDate.date}-${this.birthDate.month}-${this.birthDate.year}`;
 
-    var momentDate = moment(this.dateOfBirth, 'DD-MM-YYYY');
+    var momentDate = moment(dateOfBirth, 'DD-MM-YYYY');
 
     // check date valid
     this.error.isValidDate = momentDate.isValid();
 
-    // emit event to component that use this directive to update data and error status
-    this.dateChanged.emit({
-      dateOfBirth: this.dateOfBirth,
-      isValid: momentDate.isValid()
-    });
-
-    console.log('change date');
+    (<FormControl>this.dobControl).updateValue(dateOfBirth);
+    this.dobControl.setErrors(this.error.isValidDate ? null : {'invalid': true});
   }
 
   /**
