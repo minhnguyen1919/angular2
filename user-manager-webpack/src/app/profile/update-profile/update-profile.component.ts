@@ -10,7 +10,7 @@ import {
 
 import { Profile, DateOfBirthComponent } from '../shared';
 
-import { FirstKeyPipe, MessagesService } from '../../shared';
+import { FirstKeyPipe, MessagesService } from 'shared';
 
 import * as _ from 'lodash';
 
@@ -29,7 +29,6 @@ import * as _ from 'lodash';
 
 export class UpdateProfileComponent implements OnInit {
   @Input('profile') profile: Profile;
-  editProfile: Profile;
   profileForm: FormGroup;
   submitted: boolean = false;
 
@@ -39,21 +38,21 @@ export class UpdateProfileComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.editProfile = _.clone(this.profile);
     this.profileForm = this.formBuilder.group({
-      'username': [this.editProfile.username, Validators.required],
-      'firstName': [this.editProfile.firstName],
-      'lastName': [this.editProfile.lastName],
-      'gender': [this.editProfile.gender],
-      'email': [this.editProfile.email]
+      'username': [this.profile.username, Validators.required],
+      'firstName': [this.profile.firstName],
+      'lastName': [this.profile.lastName],
+      'gender': [this.profile.gender],
+      'email': [this.profile.email]
     })
   }
 
   onSubmit(data: any) {
     this.submitted = true;
 
-    console.log(this.profileForm.valid);
-    console.log(data);
+    if (this.profileForm.valid) {
+      _.merge(this.profile, data);
+    }
   }
 }
 

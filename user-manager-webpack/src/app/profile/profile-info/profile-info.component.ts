@@ -29,7 +29,7 @@ export class ProfileInfoComponent implements OnInit {
       username: 'minhnguyen1919',
       firstName: 'Minh',
       lastName: 'Nguyen',
-      dateOfBirth: '16-11-1990',
+      dateOfBirth: '16-05-1990',
       gender: 'male',
       email: 'minh.nguyen@asnet.com.vn'
     }

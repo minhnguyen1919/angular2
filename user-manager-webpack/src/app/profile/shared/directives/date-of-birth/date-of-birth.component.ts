@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output, Input } from '@angular/core';
 import { FormGroup, AbstractControl, FormControl } from '@angular/forms';
+import { FirstKeyPipe } from '../../../../shared';
 
 
 import * as moment from 'moment';
@@ -9,21 +10,20 @@ import * as moment from 'moment';
   template: require('./date-of-birth.component.jade'),
   styles: [
     require('./date-of-birth.component.css')
+  ],
+  pipes: [
+    FirstKeyPipe
   ]
 })
 
 export class DateOfBirthComponent implements OnInit {
   @Input('dateOfBirth') dateOfBirth: any;
   @Input('form') form: FormGroup;
+  @Input('submitted') submitted: boolean;
 
   dobControl: AbstractControl;
 
   birthDate: any;
-
-  error: any = {
-    isValidDate: true,
-    isValidAge: true
-  };
 
   constructor() {
 
@@ -52,13 +52,13 @@ export class DateOfBirthComponent implements OnInit {
     // re-create date of birth string from date that user select
     let dateOfBirth = `${this.birthDate.date}-${this.birthDate.month}-${this.birthDate.year}`;
 
+    // update date of birth value
+    (<FormControl>this.dobControl).updateValue(dateOfBirth);
+
     var momentDate = moment(dateOfBirth, 'DD-MM-YYYY');
 
     // check date valid
-    this.error.isValidDate = momentDate.isValid();
-
-    (<FormControl>this.dobControl).updateValue(dateOfBirth);
-    this.dobControl.setErrors(this.error.isValidDate ? null : {'invalid': true});
+    this.dobControl.setErrors(momentDate.isValid() ? null : {'invalid': true});
   }
 
   /**

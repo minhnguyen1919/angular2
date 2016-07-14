@@ -10,5 +10,5 @@ div.form-inline(*ngIf="birthDate")
     .form-group.col-sm-4
       select.form-control([ngModel]="birthDate.year", #year, (change)="birthDate.year=year.value; checkAge()")
         option(*ngFor="#i of generateNumberList(1900, 2016, true)", [attr.selected]="birthDate.year === i ? true : null") {{i}}
-  div(*ngIf="!error.isValidDate", class="alert alert-danger")
+  div(*ngIf="submitted && (form.controls['dateOfBirth'].errors | firstKey) === 'invalid'", class="alert alert-danger")
     | Date of birth is invalid
