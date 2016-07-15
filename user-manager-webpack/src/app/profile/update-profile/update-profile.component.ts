@@ -10,7 +10,7 @@ import {
 
 import { Profile, DateOfBirthComponent } from '../shared';
 
-import { FirstKeyPipe, MessagesService } from 'shared';
+import { FirstKeyPipe, MessagesService } from '../../shared';
 
 import * as _ from 'lodash';
 

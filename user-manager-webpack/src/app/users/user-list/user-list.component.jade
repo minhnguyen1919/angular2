@@ -1,4 +1,8 @@
 .table-responsive.col-md-8
+  .input-group
+    input(type="text", class="form-control", placeholder="Search for...", [(ngModel)]="keyword")
+    span.input-group-btn
+      button.btn.btn-default(type="button") Go!
   table.table.table-striped
     thead
       tr
@@ -9,7 +13,7 @@
         th Edit
         th Delete
     tbody
-      tr(*ngFor="let user of users")
+      tr(*ngFor="let user of users | userFilter: keyword")
         td {{user.username}}
         td {{user.address}}
         td {{user.age}}
