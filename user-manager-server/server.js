@@ -1,22 +1,20 @@
 var genId = require('./generate-id.js');
 var _ = require('lodash-node');
+var faker = require('faker');
 
-var users = [
-  {
+var users = [];
+
+for (var i = 50; i > 0 ; i--) {
+  users.push({
     id: genId.generateUUID(),
-    username: 'minhnguyen',
-    address: '19 Co Giang',
-    age: "20",
-    email: 'minh.nguyen@asnet.com.vn',
-  },
-  {
-    id: genId.generateUUID(),
-    username: 'quangminh',
-    address: '624 Nui Thanh',
-    age: "32",
-    email: 'minh.nguyequangn@asnet.com.vn'
-  }
-]
+    username: faker.name.findName(),
+    address: faker.address.streetAddress(),
+    age: faker.random.number(99),
+    email: faker.internet.email()
+  })
+}
+
+var delay = 300;
 
 
 var http = require("http");
@@ -69,17 +67,18 @@ function start(route) {
         setTimeout(function () {
           response.write(JSON.stringify(user[0]));
           response.end();
-        }, 200);
+        }, delay);
       } else {
         setTimeout(function () {
           response.write(JSON.stringify(users));
           response.end();
-        }, 200);
+        }, delay);
       }
 
 
     }
 
+    // ADD NEW USER
     if (request.method === 'PUT' && /^\/users\/.*$/.test(pathname)) {
       var id = pathname.substring(7, pathname.length);
       console.log('id');
@@ -110,7 +109,7 @@ function start(route) {
 
         response.write(JSON.stringify(users[index]));
         response.end();
-      }, 200);
+      }, delay);
     }
 
     if (request.method === 'POST' && /^\/users$/.test(pathname)) {
@@ -133,7 +132,7 @@ function start(route) {
 
         response.write(JSON.stringify(users[users.length - 1]));
         response.end();
-      }, 200);
+      }, delay);
     }
 
     if (request.method === "OPTIONS") {
