@@ -13,7 +13,7 @@
         th Edit
         th Delete
     tbody
-      tr(*ngFor="let user of users | userFilter: keyword")
+      tr(*ngFor="let user of users | userFilter: keyword | paginate: { itemsPerPage: pagination.itemsPerPage, currentPage: pagination.currentPage}")
         td {{user.username}}
         td {{user.address}}
         td {{user.age}}
@@ -21,6 +21,8 @@
         td
           a([routerLink]="['/users', user.id]") Edit
         td Delete
+
+  pagination-controls((pageChange)="pagination.currentPage = $event")
 
 .col-md-12
   a([routerLink]="['/users/new']") Add User
