@@ -17,7 +17,7 @@ import { User, UsersService, UserPipe } from '../shared';
 export class UserListComponent implements OnInit {
 
   private users: Array<User>;
-  keyword: string = 'minh';
+  keyword: string = '';
 
   constructor(
     private usersService: UsersService) {
@@ -37,7 +37,7 @@ export class UserListComponent implements OnInit {
         errors => {
           console.log('error');
         }
-      )
+      );
   }
 
 }

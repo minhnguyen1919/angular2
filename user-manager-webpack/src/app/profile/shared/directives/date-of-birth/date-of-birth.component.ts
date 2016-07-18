@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output, Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, AbstractControl, FormControl } from '@angular/forms';
 import { FirstKeyPipe } from '../../../../shared';
 
@@ -35,7 +35,7 @@ export class DateOfBirthComponent implements OnInit {
       date: this.dateOfBirth.substring(0, 2),
       month: this.dateOfBirth.substring(3, 5),
       year: this.dateOfBirth.substring(6, 11)
-    }
+    };
 
     // add dateOfBirth formControl to form
     this.form.addControl('dateOfBirth', new FormControl(this.dateOfBirth));
@@ -55,7 +55,7 @@ export class DateOfBirthComponent implements OnInit {
     // update date of birth value
     (<FormControl>this.dobControl).updateValue(dateOfBirth);
 
-    var momentDate = moment(dateOfBirth, 'DD-MM-YYYY');
+    let momentDate = moment(dateOfBirth, 'DD-MM-YYYY');
 
     // check date valid
     this.dobControl.setErrors(momentDate.isValid() ? null : {'invalid': true});
@@ -65,12 +65,12 @@ export class DateOfBirthComponent implements OnInit {
     * generate list integer number from {begin} to {end}
     */
   generateNumberList(begin: number, end: number, isRevert: boolean) {
-    var result: Array<string> = [];
+    let result: Array<string> = [];
 
-    for(let i = begin; i <= end; i++) {
+    for (let i = begin; i <= end; i++) {
       result.push((i.toString().length === 1 ? '0' : '') + i.toString());
     }
 
-    return isRevert? result.reverse(): result;
+    return isRevert ? result.reverse() : result;
   }
 }

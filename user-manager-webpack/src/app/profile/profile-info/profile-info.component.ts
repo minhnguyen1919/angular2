@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router, ROUTER_DIRECTIVES } from '@angular/router';
 import { Profile } from '../shared';
 import { UpdateProfileComponent } from '../update-profile';
@@ -32,7 +32,7 @@ export class ProfileInfoComponent implements OnInit {
       dateOfBirth: '16-05-1990',
       gender: 'male',
       email: 'minh.nguyen@asnet.com.vn'
-    }
+    };
   }
 
   updateProfile() {

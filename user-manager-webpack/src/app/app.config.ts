@@ -6,6 +6,6 @@ export interface AppConfig {
 
 export const USER_DI_CONFIG: AppConfig = {
   apiEndpoint: 'http://localhost:3000'
-}
+};
 
 export let APP_CONFIG = new OpaqueToken('app.config');

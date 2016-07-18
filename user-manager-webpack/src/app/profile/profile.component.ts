@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
 import { ProfileInfoComponent } from './profile-info';
-import { Profile } from './shared';
 
 @Component({
   // We don't need selector, bc we navigate to it from the outside, via the router.

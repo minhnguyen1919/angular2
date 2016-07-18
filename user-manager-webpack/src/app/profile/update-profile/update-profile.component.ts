@@ -3,7 +3,6 @@ import {
   FORM_DIRECTIVES,
   REACTIVE_FORM_DIRECTIVES,
   FormBuilder,
-  FormControl,
   FormGroup,
   Validators
 } from '@angular/forms';
@@ -44,7 +43,7 @@ export class UpdateProfileComponent implements OnInit {
       'lastName': [this.profile.lastName],
       'gender': [this.profile.gender],
       'email': [this.profile.email]
-    })
+    });
   }
 
   onSubmit(data: any) {

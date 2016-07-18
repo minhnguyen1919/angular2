@@ -18,7 +18,6 @@ import {
 
 // user shared
 import {
-  User,
   UsersService
 } from '../shared';
 
@@ -89,7 +88,7 @@ export class NewUserComponent implements OnInit {
     }
   }
 
-  onSubmit(value:any) {
+  onSubmit(value: any) {
     this.submitted = true;
 
     if (!this.addUserForm.valid) {
@@ -111,7 +110,7 @@ export class NewUserComponent implements OnInit {
             console.log(APP_CONSTANT.messages.user.add.fail);
             this.isLoading = false;
           }
-        )
+        );
     }
 
   }

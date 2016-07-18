@@ -14,7 +14,7 @@ export class UserPipe implements PipeTransform {
   transform(users: User[], keyword: string) {
     return _.filter(users, function (user) {
       return user.username.includes(keyword);
-    })
+    });
 
   }
 }
