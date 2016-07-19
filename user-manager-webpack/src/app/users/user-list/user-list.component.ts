@@ -36,15 +36,20 @@ export class UserListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getUsers();
     this.initPaginationConfig();
 
     this.router
       .routerState
       .queryParams
       .subscribe(params => {
+        // clear old data
+        this.users = [];
+
         let page = +params['page'];
         this.pagination.currentPage = (page && page > 0 && page <= this.pagination.totalPages) ? page : 1;
+
+        // get new data
+        this.getUsers();
 
       });
 
@@ -78,10 +83,12 @@ export class UserListComponent implements OnInit {
   }
 
   pageChange(page: number) {
-    this.pagination.currentPage = page;
-    // this.router.routerState.queryParams.
-    // let s: RouterStateSnapshot = this.router.routerState.snapshot;
-    // s['page'] = page.toString();
+    this.router.navigate(['users'], {
+      queryParams: {
+        page: page
+      }
+    });
+
   }
 
   trackByUsers(index: number, user: User) {

@@ -4,6 +4,6 @@
       a([routerLink]="['/']") Profile
         span.sr-only (current)
     li
-      a([routerLink]="['/users', { page: 2 }]") View all users
+      a([routerLink]="['/users']", [queryParams]="{ page: 2 }") View all users
     li
       a([routerLink]="['/login']") Login
