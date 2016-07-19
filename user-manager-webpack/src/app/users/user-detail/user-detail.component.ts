@@ -39,8 +39,8 @@ export class UserDetailComponent implements OnInit, OnDestroy {
             this.user = user;
             this.originalUser = _.clone(user);
           }
-        )
-    })
+        );
+    });
 
     // Snapshot: the no-observable alternative
     // let id = this.route.snapshot.params['id'];
@@ -59,12 +59,12 @@ export class UserDetailComponent implements OnInit, OnDestroy {
           console.log(APP_CONSTANT.messages.user.edit.success);
           this.router.navigate(['/users']);
         }
-      )
+      );
   }
 
   canDeactivate(): Observable<boolean> | boolean {
     if (_.isEqual(this.originalUser, this.user)) {
-      return true
+      return true;
     }
 
     let p = this.dialogService.confirm('Discard changes?');
