@@ -22,7 +22,7 @@
           a([routerLink]="['/users', user.id]") Edit
         td Delete
 
-  pagination-controls((pageChange)="pagination.currentPage = $event")
+  pagination-controls((pageChange)="pageChange($event)")
 
 .col-md-12
   a([routerLink]="['/users/new']") Add User

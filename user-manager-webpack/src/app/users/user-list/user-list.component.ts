@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ROUTER_DIRECTIVES } from '@angular/router';
+import { ActivatedRoute, ROUTER_DIRECTIVES, Router } from '@angular/router';
+
+// import { Observable } from 'rxjs/Observable';
 
 import { User, UsersService, UserPipe } from '../shared';
 
@@ -25,23 +27,34 @@ export class UserListComponent implements OnInit {
 
   private users: Array<User>;
   keyword: string = '';
-
   pagination: any;
 
   constructor(
-    private usersService: UsersService) {
-
+    private route: ActivatedRoute,
+    private usersService: UsersService,
+    private router: Router) {
   }
 
   ngOnInit() {
     this.getUsers();
     this.initPaginationConfig();
+
+    this.router
+      .routerState
+      .queryParams
+      .subscribe(params => {
+        let page = +params['page'];
+        this.pagination.currentPage = (page && page > 0 && page <= this.pagination.totalPages) ? page : 1;
+
+      });
+
   }
 
   initPaginationConfig() {
     this.pagination = {
       itemsPerPage: 10,
       currentPage: 1,
+      totalPages: 5,
       maxSize: 3,
       // directionLinks [boolean] If set to false, the "previous" and "next" links
       // will not be displayed. Default is true.
@@ -62,6 +75,13 @@ export class UserListComponent implements OnInit {
           console.log('error');
         }
       );
+  }
+
+  pageChange(page: number) {
+    this.pagination.currentPage = page;
+    // this.router.routerState.queryParams.
+    // let s: RouterStateSnapshot = this.router.routerState.snapshot;
+    // s['page'] = page.toString();
   }
 
   trackByUsers(index: number, user: User) {
