@@ -14,6 +14,21 @@ import {PaginatePipe, PaginationControlsCmp, PaginationService} from 'ng2-pagina
     ROUTER_DIRECTIVES,
     PaginationControlsCmp
   ],
+  styles: [
+    `
+      :host {
+        color: red;
+      }
+
+      :host(.active) {
+        color: yellow;
+      }
+
+      :host-context(.parent-class) th {
+        color: blue;
+      }
+    `
+  ],
   providers: [
     PaginationService
   ],
@@ -43,7 +58,7 @@ export class UserListComponent implements OnInit {
       .queryParams
       .subscribe(params => {
         // clear old data
-        this.users = [];
+        // this.users.length = 0;
 
         let page = +params['page'];
         this.pagination.currentPage = (page && page > 0 && page <= this.pagination.totalPages) ? page : 1;
