@@ -1,4 +1,56 @@
-// .header-row {
-//   background-color: #037ad1;
-//   padding: 5px 0;
-// }
+.products {
+  .product {
+    width: 100%;
+    padding: 5px 0;
+    text-align: center;
+
+    &__image,
+    &__name,
+    &__price {
+      margin-bottom: 10px;
+    }
+
+    &__image {
+      display: block;
+    }
+
+    &__name {
+      font-size: 18px;
+    }
+
+    &__price {
+      font-size: 22px;
+      font-weight: 700;
+      color: #037ad1;
+    }
+  }
+}
+
+.product-detail {
+
+  &__box {
+    margin: 0 auto;
+  }
+
+  &__name {
+    font-size: 35px;
+    margin: 10px 0 15px;
+  }
+
+  &__image {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  &__info {
+    p {
+      font-weight: 700;
+
+      span {
+        font-weight: 400;
+        margin-left: 10px;
+        color: blue;
+      }
+    }
+  }
+}
