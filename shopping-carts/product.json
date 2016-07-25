@@ -4,7 +4,7 @@
       "name":"WC-3710",
       "type":"Watches",
       "image":"http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/htc_touch_hd_1-175x175.jpg",
-      "prize":80,
+      "price":80,
       "quantity":22,
       "size":37,
       "madeIn":"Gemany"
@@ -13,7 +13,7 @@
       "name":"WC-3910",
       "type":"Watches",
       "image":"http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/htc_touch_hd_1-175x175.jpg",
-      "prize":80,
+      "price":80,
       "quantity":99,
       "size":36,
       "madeIn":"Gemany"
@@ -22,7 +22,7 @@
       "name":"WC-4610",
       "type":"Watches",
       "image":"http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/htc_touch_hd_1-175x175.jpg",
-      "prize":128,
+      "price":128,
       "quantity":62,
       "size":35,
       "madeIn":"Thailand"
@@ -31,7 +31,7 @@
       "name":"SH-2810",
       "type":"Shoes",
       "image":"http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/apple_cinema_30-175x175.jpg",
-      "prize":53,
+      "price":53,
       "quantity":45,
       "size":27,
       "madeIn":"Thailand"
@@ -40,7 +40,7 @@
       "name":"SH-7910",
       "type":"Shoes",
       "image":"http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/apple_cinema_30-175x175.jpg",
-      "prize":41,
+      "price":41,
       "quantity":71,
       "size":37,
       "madeIn":"USA"
@@ -49,7 +49,7 @@
       "name":"WC-5710",
       "type":"Watches",
       "image":"http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/htc_touch_hd_1-175x175.jpg",
-      "prize":110,
+      "price":110,
       "quantity":57,
       "size":38,
       "madeIn":"Thailand"
@@ -58,7 +58,7 @@
       "name":"WC-2010",
       "type":"Watches",
       "image":"http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/htc_touch_hd_1-175x175.jpg",
-      "prize":114,
+      "price":114,
       "quantity":40,
       "size":42,
       "madeIn":"Japan"
@@ -67,7 +67,7 @@
       "name":"WC-2610",
       "type":"Watches",
       "image":"http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/htc_touch_hd_1-175x175.jpg",
-      "prize":92,
+      "price":92,
       "quantity":91,
       "size":41,
       "madeIn":"Japan"
@@ -76,7 +76,7 @@
       "name":"WC-4110",
       "type":"Watches",
       "image":"http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/htc_touch_hd_1-175x175.jpg",
-      "prize":79,
+      "price":79,
       "quantity":85,
       "size":26,
       "madeIn":"Thailand"
@@ -85,7 +85,7 @@
       "name":"JK-3910",
       "type":"Jacket",
       "image":"http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/hp_1-175x175.jpg",
-      "prize":72,
+      "price":72,
       "quantity":86,
       "size":27,
       "madeIn":"Gemany"
@@ -94,7 +94,7 @@
       "name":"WC-5710",
       "type":"Watches",
       "image":"http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/htc_touch_hd_1-175x175.jpg",
-      "prize":42,
+      "price":42,
       "quantity":35,
       "size":31,
       "madeIn":"Japan"
@@ -103,7 +103,7 @@
       "name":"WC-3610",
       "type":"Watches",
       "image":"http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/htc_touch_hd_1-175x175.jpg",
-      "prize":97,
+      "price":97,
       "quantity":99,
       "size":25,
       "madeIn":"Japan"
@@ -112,7 +112,7 @@
       "name":"SH-4610",
       "type":"Shoes",
       "image":"http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/apple_cinema_30-175x175.jpg",
-      "prize":113,
+      "price":113,
       "quantity":37,
       "size":37,
       "madeIn":"Vietnam"
@@ -121,7 +121,7 @@
       "name":"SH-7510",
       "type":"Shoes",
       "image":"http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/apple_cinema_30-175x175.jpg",
-      "prize":116,
+      "price":116,
       "quantity":9,
       "size":33,
       "madeIn":"Japan"
@@ -130,7 +130,7 @@
       "name":"JK-3110",
       "type":"Jacket",
       "image":"http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/hp_1-175x175.jpg",
-      "prize":119,
+      "price":119,
       "quantity":55,
       "size":22,
       "madeIn":"Vietnam"
@@ -139,7 +139,7 @@
       "name":"JK-3610",
       "type":"Jacket",
       "image":"http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/hp_1-175x175.jpg",
-      "prize":95,
+      "price":95,
       "quantity":76,
       "size":44,
       "madeIn":"Thailand"
@@ -148,7 +148,7 @@
       "name":"SH-5110",
       "type":"Shoes",
       "image":"http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/apple_cinema_30-175x175.jpg",
-      "prize":79,
+      "price":79,
       "quantity":17,
       "size":27,
       "madeIn":"Japan"
@@ -157,7 +157,7 @@
       "name":"SH-110",
       "type":"Shoes",
       "image":"http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/apple_cinema_30-175x175.jpg",
-      "prize":89,
+      "price":89,
       "quantity":54,
       "size":37,
       "madeIn":"Thailand"
@@ -166,7 +166,7 @@
       "name":"WC-4410",
       "type":"Watches",
       "image":"http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/htc_touch_hd_1-175x175.jpg",
-      "prize":43,
+      "price":43,
       "quantity":53,
       "size":26,
       "madeIn":"USA"
@@ -175,7 +175,7 @@
       "name":"JK-410",
       "type":"Jacket",
       "image":"http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/hp_1-175x175.jpg",
-      "prize":106,
+      "price":106,
       "quantity":83,
       "size":44,
       "madeIn":"Gemany"
@@ -184,7 +184,7 @@
       "name":"WC-310",
       "type":"Watches",
       "image":"http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/htc_touch_hd_1-175x175.jpg",
-      "prize":128,
+      "price":128,
       "quantity":49,
       "size":30,
       "madeIn":"Gemany"
@@ -193,7 +193,7 @@
       "name":"JK-7010",
       "type":"Jacket",
       "image":"http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/hp_1-175x175.jpg",
-      "prize":127,
+      "price":127,
       "quantity":84,
       "size":44,
       "madeIn":"Vietnam"
@@ -202,7 +202,7 @@
       "name":"SH-6010",
       "type":"Shoes",
       "image":"http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/apple_cinema_30-175x175.jpg",
-      "prize":70,
+      "price":70,
       "quantity":2,
       "size":43,
       "madeIn":"USA"
@@ -211,7 +211,7 @@
       "name":"WC-3210",
       "type":"Watches",
       "image":"http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/htc_touch_hd_1-175x175.jpg",
-      "prize":96,
+      "price":96,
       "quantity":24,
       "size":25,
       "madeIn":"Vietnam"
@@ -220,7 +220,7 @@
       "name":"SH-4610",
       "type":"Shoes",
       "image":"http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/apple_cinema_30-175x175.jpg",
-      "prize":45,
+      "price":45,
       "quantity":23,
       "size":22,
       "madeIn":"Gemany"
@@ -229,7 +229,7 @@
       "name":"SH-610",
       "type":"Shoes",
       "image":"http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/apple_cinema_30-175x175.jpg",
-      "prize":86,
+      "price":86,
       "quantity":56,
       "size":40,
       "madeIn":"Gemany"
@@ -238,7 +238,7 @@
       "name":"JK-410",
       "type":"Jacket",
       "image":"http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/hp_1-175x175.jpg",
-      "prize":126,
+      "price":126,
       "quantity":77,
       "size":32,
       "madeIn":"Japan"
@@ -247,7 +247,7 @@
       "name":"SH-210",
       "type":"Shoes",
       "image":"http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/apple_cinema_30-175x175.jpg",
-      "prize":33,
+      "price":33,
       "quantity":82,
       "size":33,
       "madeIn":"USA"
@@ -256,7 +256,7 @@
       "name":"JK-6510",
       "type":"Jacket",
       "image":"http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/hp_1-175x175.jpg",
-      "prize":70,
+      "price":70,
       "quantity":28,
       "size":43,
       "madeIn":"Japan"
@@ -265,7 +265,7 @@
       "name":"WC-5710",
       "type":"Watches",
       "image":"http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/htc_touch_hd_1-175x175.jpg",
-      "prize":92,
+      "price":92,
       "quantity":62,
       "size":36,
       "madeIn":"Thailand"

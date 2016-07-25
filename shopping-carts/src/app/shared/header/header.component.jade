@@ -14,7 +14,7 @@
         #bigshop-navbar-collapse.collapse.navbar-collapse
           ul.nav.navbar-nav
             li.active
-              a(href='#')
+              a([routerLink]="['/products']")
                 | Home
                 span.sr-only (current)
             li.dropdown
@@ -23,11 +23,11 @@
                 span.caret
               ul.dropdown-menu
                 li
-                  a(href='#') Shoes
+                  a([routerLink]="['/products']", [queryParams]="{type: 'Shoes'}") Shoes
                 li
-                  a(href='#') Jackets
+                  a([routerLink]="['/products']", [queryParams]="{type: 'Jacket'}") Jackets
                 li
-                  a(href='#') Watches
+                  a([routerLink]="['/products']", [queryParams]="{type: 'Watches'}") Watches
                 li.divider(role='separator')
                 li
                   a(href='#') Other

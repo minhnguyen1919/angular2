@@ -23,8 +23,21 @@ export class ProductService {
     return res.json();
   }
 
-  getProduct(): Observable<Product[]> {
-    return this.http.get(this.productUrl)
+  getProducts(params: any): Observable<Product[]> {
+    let searchParams = new URLSearchParams();
+    if (params.type) {
+      searchParams.set('type', params.type);
+    }
+
+    return this.http.get(this.productUrl, { search: searchParams })
+      .map(this.extractData);
+  }
+
+  getProduct(name: string): Observable<Product> {
+    let searchParams = new URLSearchParams();
+    searchParams.set('name', name);
+
+    return this.http.get(this.productUrl, { search: searchParams })
       .map(this.extractData);
   }
 }

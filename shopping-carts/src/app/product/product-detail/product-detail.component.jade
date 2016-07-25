@@ -1,0 +1,24 @@
+.product-detail(*ngIf="product")
+  h2.product-detail__name
+    | {{product.name}}
+  .row
+    .col-md-6.product-detail__box.product-detail__image
+      img(src="http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/apple_cinema_30-350x350.jpg", alt="shoes alt")
+    .col-md-6.product-detail__box.product-detail__wrapper
+      .product-detail__info
+        p
+          | Type:
+          span {{product.type}}
+      .product-detail__info
+        p
+          | Branch:
+          span {{product.madeIn}}
+      .product-detail__info
+        p
+          | Product Code:
+          span {{product.name}}
+      .product-detail__price
+        | ${{product.price}}.00
+      .product-detail__option
+        .product-detail__size
+          | Available size: {{product.size}}

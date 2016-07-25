@@ -1,24 +1,22 @@
 import { RouterConfig } from '@angular/router';
 
 import { ProductsComponent } from './products';
+import { ProductDetailComponent } from './product-detail';
 import { ProductComponent } from './product.component';
 
 export const ProductRoutes: RouterConfig = [
+
   {
-    path: '',
-    redirectTo: 'product'
-  },
-  {
-    path: 'product',
+    path: 'products',
     component: ProductComponent,
     children: [
       {
         path: '',
-        redirectTo: 'all'
+        component: ProductsComponent
       },
       {
-        path: 'all',
-        component: ProductsComponent
+        path: ':name',
+        component: ProductDetailComponent
       }
     ]
   }
