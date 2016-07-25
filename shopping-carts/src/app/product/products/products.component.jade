@@ -1,45 +1,10 @@
 .row.products
-  .col.xs-6.col-sm-4.col-md-3.col-lg-2
+  .col.xs-6.col-sm-4.col-md-3.col-lg-2(*ngFor="let product of products")
     .product
       a.product__image(href="javascript:void(0);")
-        img(src="http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/apple_cinema_30-175x175.jpg" alt="shoes")
-      a.product__name(href="javascript:void(0);") Shoes 2016-zx
-      .product__price $114.00
-      a.add-to-cart(href="javascript: void(0);") Add to Cart
-  .col.xs-6.col-sm-4.col-md-3.col-lg-2
-    .product
-      a.product__image(href="javascript:void(0);")
-        img(src="http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/hp_1-175x175.jpg" alt="jacket")
-      a.product__name(href="javascript:void(0);") Shoes 2016-zx
-      .product__price $114.00
-      a.add-to-cart(href="javascript: void(0);") Add to Cart
-  .col.xs-6.col-sm-4.col-md-3.col-lg-2
-    .product
-      a.product__image(href="javascript:void(0);")
-        img(src="http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/htc_touch_hd_1-175x175.jpg" alt="watch")
-      a.product__name(href="javascript:void(0);") Shoes 2016-zx
-      .product__price $114.00
-      a.add-to-cart(href="javascript: void(0);") Add to Cart
-  .col.xs-6.col-sm-4.col-md-3.col-lg-2
-    .product
-      a.product__image(href="javascript:void(0);")
-        img(src="http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/apple_cinema_30-175x175.jpg" alt="shoes")
-      a.product__name(href="javascript:void(0);") Shoes 2016-zx
-      .product__price $114.00
-      a.add-to-cart(href="javascript: void(0);") Add to Cart
-  .col.xs-6.col-sm-4.col-md-3.col-lg-2
-    .product
-      a.product__image(href="javascript:void(0);")
-        img(src="http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/hp_1-175x175.jpg" alt="jacket")
-      a.product__name(href="javascript:void(0);") Shoes 2016-zx
-      .product__price $114.00
-      a.add-to-cart(href="javascript: void(0);") Add to Cart
-  .col.xs-6.col-sm-4.col-md-3.col-lg-2
-    .product
-      a.product__image(href="javascript:void(0);")
-        img(src="http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/htc_touch_hd_1-175x175.jpg" alt="watch")
-      a.product__name(href="javascript:void(0);") Shoes 2016-zx
-      .product__price $114.00
+        img(src="{{product.image}}" alt="{{product.type}}")
+      a.product__name(href="javascript:void(0);") {{product.name}}
+      .product__price {{product.price}}
       a.add-to-cart(href="javascript: void(0);") Add to Cart
 
 .product-detail

@@ -1,6 +1,6 @@
 import { provideRouter, RouterConfig } from '@angular/router';
 
-import { ProductComponent, ProductRoutes } from './product';
+import { ProductRoutes } from './product';
 
 const routes: RouterConfig = [
   ...ProductRoutes

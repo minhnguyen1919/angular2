@@ -5,6 +5,5 @@ export class Product {
   prize: string;
   quantity: number;
   size: number;
-  color: string;
   madein: string;
 }
