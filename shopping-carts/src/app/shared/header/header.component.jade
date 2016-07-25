@@ -1,0 +1,41 @@
+.main-header.header-row
+  .container
+    .navbar.navbar-default.navbar-static
+      .container-fluid
+        .navbar-header
+          button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target="#bigshop-navbar-collapse", aria-expanded="true")
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+
+          a.navbar-brand(href="#") Shopping
+
+        #bigshop-navbar-collapse.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li.active
+              a(href='#')
+                | Home
+                span.sr-only (current)
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                | Categories
+                span.caret
+              ul.dropdown-menu
+                li
+                  a(href='#') Shoes
+                li
+                  a(href='#') Jackets
+                li
+                  a(href='#') Watches
+                li.divider(role='separator')
+                li
+                  a(href='#') Other
+            li
+              a(href="#")
+                | Contact us
+
+          form.navbar-form.navbar-left(role='search')
+            .form-group
+              input.form-control(type='text', placeholder='Search')
+            button.btn.btn-default(type='submit') Submit
