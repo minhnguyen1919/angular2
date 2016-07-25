@@ -1,11 +1,12 @@
 import { provideRouter, RouterConfig } from '@angular/router';
 
-import { CanDeactivateGuard } from './interfaces';
+import { ProductComponent, ProductRoutes } from './product';
 
-export const routes: RouterConfig = [
+const routes: RouterConfig = [
+  ...ProductRoutes
 ];
 
 export const APP_ROUTER_PROVIDERS = [
-  provideRouter(routes),
-  CanDeactivateGuard
+  provideRouter(routes)
+
 ];

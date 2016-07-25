@@ -1,12 +1,12 @@
 import { bootstrap } from '@angular/platform-browser-dynamic';
 import { enableProdMode } from '@angular/core';
-import { HTTP_PROVIDERS, JSONP_PROVIDERS } from '@angular/http';
-import { provideForms } from '@angular/forms';
+import { HTTP_PROVIDERS } from '@angular/http';
 
 import { APP_CONFIG, USER_DI_CONFIG } from './app/app.config';
 
 import {
-  AppComponent
+  AppComponent,
+  APP_ROUTER_PROVIDERS
 } from './app';
 
 
@@ -15,8 +15,7 @@ if (process.env.ENV === 'production') {
 }
 
 bootstrap(AppComponent, [
+  APP_ROUTER_PROVIDERS,
   HTTP_PROVIDERS,
-  JSONP_PROVIDERS,
-  provideForms(),
   { provide: APP_CONFIG, useValue: USER_DI_CONFIG }
 ]);
