@@ -1,8 +1,8 @@
 .row.products
   .col.xs-6.col-sm-4.col-md-3.col-lg-2(*ngFor="let product of products")
     .product
-      a.product__image([routerLink]="['/products', product.name]")
+      a.product__image([routerLink]="['/products', product.name]", [queryParams]="{}")
         img(src="{{product.image}}", alt="{{product.type}}")
-      a.product__name([routerLink]="['/products', product.name]") {{product.name}}
+      a.product__name([routerLink]="['/products', product.name]", [queryParams]="{}") {{product.name}}
       .product__price ${{product?.price}}.00
       a.add-to-cart(href="javascript: void(0);") Add to Cart
