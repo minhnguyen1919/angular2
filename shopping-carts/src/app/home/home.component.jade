@@ -1,12 +1,20 @@
-product-list([start]="0", [end]="6")
+article
+  h3.section-header
+    span Latest
+  product-list([start]="0", [end]="6")
+  p.read-more
+    a([routerLink]="['/products']") All products
 
-.row.categories
-  .col-xs-12.col-sm-12.col-md-4.category
-    a([routerLink]="['/products']", [queryParams]="{type: 'Watches'}")
-      img(src="http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/banners/watches-360x200.jpg", alt="watches category")
-  .col-xs-12.col-sm-12.col-md-4.category
-    a([routerLink]="['/products']", [queryParams]="{type: 'Jacket'}")
-      img(src="http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/banners/jackets-360x200.jpg", alt="jackets category")
-  .col-xs-12.col-sm-12.col-md-4.category
-    a([routerLink]="['/products']", [queryParams]="{type: 'Shoes'}")
-      img(src="http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/banners/shoes-360x200.jpg", alt="shoes category")
+article
+  h3.section-header
+    span Categories
+  .row.categories
+    .col-xs-12.col-sm-12.col-md-4.category
+      a([routerLink]="['/products']", [queryParams]="{type: 'Watches'}")
+        img(src="http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/banners/watches-360x200.jpg", alt="watches category")
+    .col-xs-12.col-sm-12.col-md-4.category
+      a([routerLink]="['/products']", [queryParams]="{type: 'Jacket'}")
+        img(src="http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/banners/jackets-360x200.jpg", alt="jackets category")
+    .col-xs-12.col-sm-12.col-md-4.category
+      a([routerLink]="['/products']", [queryParams]="{type: 'Shoes'}")
+        img(src="http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/banners/shoes-360x200.jpg", alt="shoes category")

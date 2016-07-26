@@ -9,7 +9,7 @@ var names = [
 var images = [
   'http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/apple_cinema_30-175x175.jpg',
   'http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/hp_1-175x175.jpg',
-  'http://www.wardazarqa.com/image/cache/data/categories/image6-175x175.png'
+  'http://www.motorward.com/wp-content/images/2013/04/Ford-Mustang-50th-Anniversary-Shinola-Watch-175x175.jpg'
 ];
 
 var types = [

@@ -1,3 +1,41 @@
+.section-header {
+  transform: uppercase;
+  border-bottom: 1px solid #e5e5e5;
+  margin-top: 20px;
+
+  span {
+    color: #333;
+    display: inline-block;
+    margin-bottom: -1px;
+    border-bottom: 2px solid #ccc;
+  }
+}
+
+.read-more {
+  overflow: hidden;
+  margin: 15px 0;
+  text-align: center;
+
+  a {
+    font-size: 20px;
+    color: #555;
+    display: inline-block;
+    border: 1px solid #41b7d8;
+    padding: 10px;
+    border-radius: 3px;
+    transition: all .3s ease-in-out;
+
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: none;
+      background-color: #41b7d8;
+      color: white;
+      transition: all .3s ease-in-out;
+    }
+  }
+}
+
 .products {
   .product {
     width: 100%;
@@ -12,6 +50,14 @@
 
     &__image {
       display: block;
+      transition: all .3s ease-in-out;
+
+      &:hover,
+      &:focus,
+      &:active {
+        opacity: .8;
+        transition: all .3s ease-in-out;
+      }
     }
 
     &__name {
@@ -74,6 +120,14 @@
       img {
         width: 100%;
         height: auto;
+        transition: all .3s ease-in-out;
+
+        &:hover,
+        &:focus,
+        &:active {
+          opacity: .8;
+          transition: all .3s ease-in-out;
+        }
       }
     }
   }

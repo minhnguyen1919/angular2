@@ -40,8 +40,6 @@ export class ProductListComponent implements OnInit {
 
         this.getProduct(getProductParams);
       });
-
-
   }
 
   getProduct(params: any) {
@@ -49,7 +47,6 @@ export class ProductListComponent implements OnInit {
       .subscribe(
         products => {
           this.products = products;
-          console.log(this.products);
         },
         errors => {
           console.log(errors);
