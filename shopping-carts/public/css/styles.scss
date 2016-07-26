@@ -63,3 +63,39 @@
     }
   }
 }
+
+.categories {
+  .category {
+    a {
+      display: block;
+      text-align: center;
+      margin: 15px 0;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .categories {
+    .category {
+      a {
+        width: 480px;
+        margin: 15px auto;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 990px) {
+  .categories {
+    .category {
+      a {
+        width: 100%;
+      }
+    }
+  }
+}

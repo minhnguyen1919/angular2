@@ -1,1 +1,12 @@
-product-list([start]="0", [end]="12")
+product-list([start]="0", [end]="6")
+
+.row.categories
+  .col-xs-12.col-sm-12.col-md-4.category
+    a([routerLink]="['/products']", [queryParams]="{type: 'Watches'}")
+      img(src="http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/banners/watches-360x200.jpg", alt="watches category")
+  .col-xs-12.col-sm-12.col-md-4.category
+    a([routerLink]="['/products']", [queryParams]="{type: 'Jacket'}")
+      img(src="http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/banners/jackets-360x200.jpg", alt="jackets category")
+  .col-xs-12.col-sm-12.col-md-4.category
+    a([routerLink]="['/products']", [queryParams]="{type: 'Shoes'}")
+      img(src="http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/banners/shoes-360x200.jpg", alt="shoes category")
