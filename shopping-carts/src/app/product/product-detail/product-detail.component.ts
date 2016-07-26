@@ -8,7 +8,7 @@ import { Product, ProductService } from '../shared';
   template: require('./product-detail.component.jade')
 })
 
-export class ProductDetailComponent implements OnInit{
+export class ProductDetailComponent implements OnInit {
 
   product: Product;
 

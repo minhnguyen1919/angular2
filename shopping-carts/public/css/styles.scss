@@ -44,6 +44,11 @@
   &__image {
     text-align: center;
     margin: 10px 0;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 
   &__info {

@@ -1,8 +1,10 @@
 import { provideRouter, RouterConfig } from '@angular/router';
 
 import { ProductRoutes } from './product';
+import { HomeRoutes } from './home';
 
 const routes: RouterConfig = [
+  ...HomeRoutes,
   ...ProductRoutes
 ];
 

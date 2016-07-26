@@ -9,12 +9,12 @@
             span.icon-bar
             span.icon-bar
 
-          a.navbar-brand(href="#") Shopping
+          a.navbar-brand([routerLink]="['/home']") Shopping
 
         #bigshop-navbar-collapse.collapse.navbar-collapse
           ul.nav.navbar-nav
             li.active
-              a([routerLink]="['/products']")
+              a([routerLink]="['/home']")
                 | Home
                 span.sr-only (current)
             li.dropdown
@@ -23,14 +23,14 @@
                 span.caret
               ul.dropdown-menu
                 li
+                  a([routerLink]="['/products']") Products
+                li.divider(role='separator')
+                li
                   a([routerLink]="['/products']", [queryParams]="{type: 'Shoes'}") Shoes
                 li
                   a([routerLink]="['/products']", [queryParams]="{type: 'Jacket'}") Jackets
                 li
                   a([routerLink]="['/products']", [queryParams]="{type: 'Watches'}") Watches
-                li.divider(role='separator')
-                li
-                  a(href='#') Other
             li
               a(href="#")
                 | Contact us

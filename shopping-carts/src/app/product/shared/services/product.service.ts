@@ -29,6 +29,11 @@ export class ProductService {
       searchParams.set('type', params.type);
     }
 
+    if (!isNaN(params.start) && !isNaN(params.end)) {
+      searchParams.set('_start', params.start);
+      searchParams.set('_end', params.end);
+    }
+
     return this.http.get(this.productUrl, { search: searchParams })
       .map(this.extractData);
   }
