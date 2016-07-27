@@ -1,4 +1,7 @@
 var webpack = require('webpack');
+var webpackLoadPlugins = require('webpack-load-plugins');
+var plugins = webpackLoadPlugins();
+
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var helpers = require('./helpers');
@@ -43,7 +46,7 @@ module.exports = {
       {
         test: /\.scss$/,
         exclude: helpers.root('src', 'app'),
-        loaders: ["style", "css", "postcss", "sass"]
+        loader: ExtractTextPlugin.extract(["css?sourceMap", "postcss", "sass"])
       },
       {
         test: /\.css$/,
@@ -62,7 +65,7 @@ module.exports = {
       name: ['app', 'vendor', 'polyfills']
     }),
 
-    new HtmlWebpackPlugin({
+    new plugins['html']({
       template: 'src/index.jade'
     })
   ]
