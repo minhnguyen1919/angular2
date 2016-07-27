@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import './rxjs-operators';
 import 'rxjs/Rx';
 
-import '../../public/css/styles.scss';
+import '../../public/styles/app.scss';
 
 import { ContentComponent, HeaderComponent } from './shared';
 
