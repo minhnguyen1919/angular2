@@ -1,0 +1,13 @@
+.section-header {
+  transform: uppercase;
+  border-bottom: 1px solid #e5e5e5;
+  margin-top: 20px;
+
+  span {
+    color: #333;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: -1px;
+    border-bottom: 2px solid #ccc;
+  }
+}

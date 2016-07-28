@@ -1,0 +1,22 @@
+.categories {
+  .category {
+    a {
+      display: block;
+      text-align: center;
+      margin: 15px 0;
+
+      img {
+        width: 100%;
+        height: auto;
+        transition: all .3s ease-in-out;
+
+        &:hover,
+        &:focus,
+        &:active {
+          opacity: .8;
+          transition: all .3s ease-in-out;
+        }
+      }
+    }
+  }
+}
