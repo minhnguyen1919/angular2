@@ -40,8 +40,12 @@ module.exports = {
         loader: 'html'
       },
       {
-        test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
-        loader: 'file?name=assets/[name].[hash].[ext]'
+        test: /\.(png|jpe?g|gif)$/,
+        loader: 'file?name=assets/images/[name].[ext]'
+      },
+      {
+        test: /\.(svg|woff|woff2|ttf|eot)$/,
+        loader: 'file?name=assets/fonts/[name].[ext]'
       },
       {
         test: /\.scss$/,
