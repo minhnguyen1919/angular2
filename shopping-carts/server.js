@@ -7,9 +7,9 @@ var names = [
 ];
 
 var images = [
-  'http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/apple_cinema_30-175x175.jpg',
-  'http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/hp_1-175x175.jpg',
-  'http://www.motorward.com/wp-content/images/2013/04/Ford-Mustang-50th-Anniversary-Shinola-Watch-175x175.jpg'
+  'http://www.hockeyireland.com/image/cache/data/Adidas/Shoes/2016/AQ6507-165x165.jpg',
+  'http://www.hockeyireland.com/image/cache/data/Reece/breathable-comfort-jacket-unisex-navy_1-165x165.jpg',
+  'http://priyojinish.com/image/cache/data/Jewellary/0000054_fancy-love-watch-for-ladies-165x165.jpeg'
 ];
 
 var types = [

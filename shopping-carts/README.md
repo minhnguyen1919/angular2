@@ -1,13 +1,12 @@
-# User manager project
+# Shopping carts project
 
 ----
 ## Run project
 
 1. Run server
- - `cd ../user-manager-server`
- - run `node index.js` to start server
+ - Install json-server: `npm install -g json-server`
+ - Run `json-server product.json` to start server
 
 2. Run webapp
- - `cd ../user-manager-webpack`
  - `npm install`
  - `npm run start`
