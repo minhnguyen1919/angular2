@@ -34,4 +34,4 @@
     #description.tab-pane.active(role='tabpanel')
       | {{product?.description}}
     #comments.tab-pane(role='tabpanel')
-      comment
+      comment([postId]="product.id")

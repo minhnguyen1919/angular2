@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Comment } from '../shared';
 
 @Component({
   selector: 'comment-detail',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
 })
 
 export class CommentDetailComponent {
-
+  @Input() comment: Comment;
 }

@@ -1,6 +1,3 @@
 .comments
-  comment-detail
-  comment-detail
-  comment-detail
-  comment-detail
+  comment-detail(*ngFor="let comment of comments", *ngForTrackBy="trackByComment", [comment]="comment")
   add-comment
