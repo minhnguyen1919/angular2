@@ -224,6 +224,14 @@
   border-radius: 0;
 }
 
+%float-left {
+  float: left;
+}
+
+%float-right {
+  float: right;
+}
+
 %transition-ease-in-out-all {
   transition: all .3s ease-in-out;
 }

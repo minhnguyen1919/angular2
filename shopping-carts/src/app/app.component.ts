@@ -4,7 +4,7 @@ import 'rxjs/Rx';
 
 import './assets';
 
-import { ContentComponent, HeaderComponent } from './shared';
+import { ContentComponent, HeaderComponent, FooterComponent } from './shared';
 
 import { ProductService } from './product';
 
@@ -13,7 +13,8 @@ import { ProductService } from './product';
   template: require('./app.component.jade'),
   directives: [
     ContentComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   providers: [
     ProductService
