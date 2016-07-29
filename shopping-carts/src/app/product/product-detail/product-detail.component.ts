@@ -2,10 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { Product, ProductService } from '../shared';
+import { CommentComponent } from '../comment';
 
 @Component({
   selector: 'product-detail',
-  template: require('./product-detail.component.jade')
+  template: require('./product-detail.component.jade'),
+  directives: [
+    CommentComponent
+  ]
 })
 
 export class ProductDetailComponent implements OnInit {

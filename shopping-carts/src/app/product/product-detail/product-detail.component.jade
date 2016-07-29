@@ -22,3 +22,16 @@
       .product-detail__option
         .product-detail__size
           | Available size: {{product.size}}
+
+  // Nav tabs
+  ul.nav.nav-tabs(role='tablist')
+    li.active(role='presentation')
+      a(href='#description', aria-controls='description', role='tab', data-toggle='tab') Description
+    li(role='presentation')
+      a(href='#comments', aria-controls='comments', role='tab', data-toggle='tab') Comments
+  // Tab panes
+  .tab-content
+    #description.tab-pane.active(role='tabpanel')
+      | {{product?.description}}
+    #comments.tab-pane(role='tabpanel')
+      comment
