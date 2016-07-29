@@ -1,10 +1,10 @@
 .new-comment
   p Write a review
-  form
+  form([formGroup]="newCommentForm", (ngSubmit)="onSubmit(newCommentForm.value)")
     .form-group
       label Your name
-      input.form-control(type="text", placeholder="Your name")
+      input.form-control(type="text", placeholder="Your name", [formControl]="newCommentForm.controls['user']")
     .form-group
       label Your review
-      textarea.form-control(type="text", placeholder="Your review")
+      textarea.form-control(type="text", placeholder="Your review", [formControl]="newCommentForm.controls['comment']")
     button.btn.btn-default(type="submit") Continue

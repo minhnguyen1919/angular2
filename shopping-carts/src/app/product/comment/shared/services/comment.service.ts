@@ -1,10 +1,15 @@
 import { Injectable, Inject } from '@angular/core';
-import { Http, URLSearchParams, Response } from '@angular/http';
+import { Http, URLSearchParams, RequestOptions, Response, Headers } from '@angular/http';
 
 import { Observable } from 'rxjs/Observable';
 import { Comment } from '../models';
 import { APP_CONFIG, AppConfig } from '../../../../app.config';
 
+let headers = new Headers({
+  'Content-Type': 'application/json'
+});
+
+let options = new RequestOptions({ headers: headers });
 
 @Injectable()
 export class CommentService {
@@ -27,5 +32,19 @@ export class CommentService {
 
     return this.http.get(this.commentUrl, { search: queryParams })
       .map(this.extractData);
+  }
+
+  private post(comment: Comment) {
+    return this.http
+            .post(this.commentUrl, JSON.stringify(comment), options)
+            .map(this.extractData);
+  }
+
+  save(comment: Comment) {
+    if (comment.id) {
+      return;
+    }
+
+    return this.post(comment);
   }
 }

@@ -30,6 +30,10 @@ export class CommentComponent implements OnInit{
       });
   }
 
+  newComment(comment: Comment) {
+    this.comments.push(comment);
+  }
+
   trackByComment(index: number, comment: Comment) {
     return comment.id;
   }

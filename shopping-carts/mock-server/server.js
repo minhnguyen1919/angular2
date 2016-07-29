@@ -66,7 +66,7 @@ for (var i = 0; i < 200; i++) {
     id: generateUUID(),
     productId: productIds[randomProductIndex],
     user: faker.name.findName(),
-    comments: faker.lorem.sentence()
+    comment: faker.lorem.sentence()
 
   })
 }

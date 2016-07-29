@@ -1,10 +1,66 @@
-import { Component } from '@angular/core';
+import {
+  Component,
+  Input,
+  Output,
+  OnInit,
+  EventEmitter } from '@angular/core';
+import {
+  FORM_DIRECTIVES,
+  REACTIVE_FORM_DIRECTIVES,
+  FormBuilder,
+  FormControl,
+  FormGroup } from '@angular/forms';
+
+import {
+  Comment,
+  CommentService } from '../shared';
 
 @Component({
   selector: 'add-comment',
-  template: require('./add-comment.component.jade')
+  template: require('./add-comment.component.jade'),
+  directives: [
+    FORM_DIRECTIVES,
+    REACTIVE_FORM_DIRECTIVES
+  ]
 })
 
-export class AddCommentComponent {
+export class AddCommentComponent implements OnInit {
+  @Input() postId: string;
+  @Output() newComment = new EventEmitter();
+  newCommentForm: FormGroup;
+  isAdding: boolean = false;
 
+  constructor(
+    private commentService: CommentService,
+    private formBuilder: FormBuilder) {
+
+  }
+
+  ngOnInit() {
+    this.newCommentForm = this.formBuilder.group({
+      'user': [''],
+      'comment': ['']
+    });
+  }
+
+  resetFormData() {
+    (<FormControl>this.newCommentForm.controls['user']).updateValue('');
+    (<FormControl>this.newCommentForm.controls['comment']).updateValue('');
+  }
+
+  onSubmit(comment: Comment) {
+    if (this.isAdding) {
+      return;
+    }
+
+    this.isAdding = true;
+    comment.productId = this.postId;
+    this.commentService.save(comment)
+      .subscribe(comment => {
+        this.isAdding = false;
+        this.newComment.emit(comment);
+
+        this.resetFormData();
+      });
+  }
 }
