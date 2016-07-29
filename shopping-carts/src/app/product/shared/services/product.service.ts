@@ -16,7 +16,7 @@ export class ProductService {
   constructor(
     private http: Http,
     @Inject(APP_CONFIG) private config: AppConfig) {
-    this.productUrl = this.config.apiEndpoint + '/product';
+    this.productUrl = this.config.apiEndpoint + '/products';
   }
 
   private extractData(res: Response) {
