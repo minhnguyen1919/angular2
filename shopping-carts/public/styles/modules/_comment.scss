@@ -2,7 +2,6 @@
 
   &-detail {
     margin: 15px 0;
-    // border-bottom: 1px solid #ccc;
     padding: 10px;
     background-color: #fcf8e3;
     border-radius: 10px;
@@ -28,6 +27,7 @@
   }
 
   form {
+    @extend %overflow-hidden;
     margin-top: 15px;
   }
 }

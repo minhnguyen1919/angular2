@@ -9,13 +9,13 @@
 
     .copyright {
       @extend %float-left;
-      width: 200px;
+      width: 120px;
       color: #fff;
     }
 
     .author {
       @extend %float-right, %text-right;
-      width: 200px;
+      width: 150px;
       color: #fff;
     }
   }

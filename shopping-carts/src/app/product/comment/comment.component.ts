@@ -16,7 +16,7 @@ import { Comment, CommentService } from './shared';
   ]
 })
 
-export class CommentComponent implements OnInit{
+export class CommentComponent implements OnInit {
   @Input() postId: string;
   comments: Comment[] = [];
 

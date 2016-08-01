@@ -4,10 +4,6 @@ import { Observable } from 'rxjs/Observable';
 import { Product } from '../models';
 import { APP_CONFIG, AppConfig } from '../../../app.config';
 
-let headers = new Headers({
-  'Content-type': 'application/json'
-});
-
 @Injectable()
 
 export class ProductService {

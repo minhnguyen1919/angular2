@@ -1,8 +1,13 @@
-.nav-tabs {
-  border-bottom: none;
+.tab-wrapper {
+  margin-top: 20px;
+
+  .nav-tabs {
+    border-bottom: none;
+  }
+
+  .tab-content {
+    padding: 15px;
+    border: 1px solid #ddd;
+  }
 }
 
-.tab-content {
-  padding: 15px;
-  border: 1px solid #ddd;
-}
