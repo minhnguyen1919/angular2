@@ -14,21 +14,21 @@ import {PaginatePipe, PaginationControlsCmp, PaginationService} from 'ng2-pagina
     ROUTER_DIRECTIVES,
     PaginationControlsCmp
   ],
-  styles: [
-    `
-      :host {
-        color: red;
-      }
+  // styles: [
+  //   `
+  //     :host {
+  //       color: red;
+  //     }
 
-      :host(.active) {
-        color: yellow;
-      }
+  //     :host(.active) {
+  //       color: yellow;
+  //     }
 
-      :host-context(.parent-class) th {
-        color: blue;
-      }
-    `
-  ],
+  //     :host-context(.parent-class) th {
+  //       color: blue;
+  //     }
+  //   `
+  // ],
   providers: [
     PaginationService
   ],

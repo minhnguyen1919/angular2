@@ -36,7 +36,7 @@ export class UserDetailComponent implements OnInit, OnDestroy {
       this.userService.getUser(id)
         .subscribe(
           user => {
-            this.user = user;
+            this.user = user[0];
             this.originalUser = _.clone(user);
           }
         );

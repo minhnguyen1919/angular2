@@ -1,12 +1,14 @@
 import { Injectable, Inject } from '@angular/core';
-import { Http, Headers, URLSearchParams, Response } from '@angular/http';
+import { Http, Headers, URLSearchParams, RequestOptions, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { User } from '../models';
 import { APP_CONFIG, AppConfig } from '../../../app.config';
 
 let headers = new Headers({
-  'Content-type': 'application/json'
+  'Content-Type': 'application/json'
 });
+
+let options = new RequestOptions({ headers: headers });
 
 @Injectable()
 
