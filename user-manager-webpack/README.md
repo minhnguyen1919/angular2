@@ -4,10 +4,10 @@
 ## Run project
 
 1. Run server
- - `cd ../user-manager-server`
- - run `node index.js` to start server
+ - Install json-server: `npm install -g json-server`
+ - Go to mock-server folder `cd mock-server`
+ - Run `json-server db.json` to start server
 
 2. Run webapp
- - `cd ../user-manager-webpack`
  - `npm install`
  - `npm run start`
