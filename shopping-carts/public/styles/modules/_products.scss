@@ -76,27 +76,22 @@
 
   margin-bottom: 20px;
 
-  &__box {
-    margin: 0 auto;
+  &__image {
+    @extend %text-center;
+    margin: 10px 0;
+
+    img {
+      width: 350px;
+      height: auto;
+    }
   }
 
   &__wrapper {
-    width: 350px;
   }
 
   &__name {
     font-size: 35px;
     margin: 10px 0 15px;
-  }
-
-  &__image {
-    text-align: center;
-    margin: 10px 0;
-
-    img {
-      width: 100%;
-      height: auto;
-    }
   }
 
   &__info {

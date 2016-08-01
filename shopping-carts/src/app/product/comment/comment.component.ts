@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, OnChanges } from '@angular/core';
 
 import { CommentDetailComponent } from './comment-detail';
 import { AddCommentComponent } from './add-comment';
@@ -16,7 +16,7 @@ import { Comment, CommentService } from './shared';
   ]
 })
 
-export class CommentComponent implements OnInit {
+export class CommentComponent implements OnInit, OnChanges {
   @Input() postId: string;
   comments: Comment[] = [];
 
@@ -24,6 +24,14 @@ export class CommentComponent implements OnInit {
     private commentService: CommentService) {}
 
   ngOnInit() {
+    this.getComments();
+  }
+
+  ngOnChanges() {
+    this.getComments();
+  }
+
+  getComments() {
     this.commentService.getComments(this.postId)
       .subscribe(comments => {
         this.comments = comments;

@@ -4,9 +4,9 @@
       h2.product-detail__name
         | {{product.name}}
       .row
-        .col-md-6.product-detail__box.product-detail__image
-          img(src="http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/apple_cinema_30-350x350.jpg", alt="shoes alt")
-        .col-md-6.product-detail__box.product-detail__wrapper
+        .col-sm-6.product-detail__image
+          img(src="{{product.image}}", alt="shoes alt")
+        .col-sm-6.product-detail__wrapper
           .product-detail__info
             p
               | Type:

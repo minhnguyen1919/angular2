@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { Product, ProductService } from '../shared';
@@ -14,24 +14,30 @@ import { SidebarComponent } from '../sidebar';
   ]
 })
 
-export class ProductDetailComponent implements OnInit {
+export class ProductDetailComponent implements OnInit, OnDestroy {
 
   product: Product;
+  private sub: any;
 
   constructor(
     private route: ActivatedRoute,
     private productService: ProductService) {}
 
   ngOnInit() {
-    let productName = this.route.snapshot.params['name'];
 
-    this.productService.getProduct(productName)
-      .subscribe(
-        product => {
-          this.product = product[0];
-        }
-      );
+    this.sub = this.route.params.subscribe(params => {
+      let productName = params['name'];
 
+      this.productService.getProduct(productName)
+        .subscribe(
+          product => {
+            this.product = product[0];
+          }
+        );
+    });
+  }
 
+  ngOnDestroy() {
+    this.sub.unsubscribe();
   }
 }
