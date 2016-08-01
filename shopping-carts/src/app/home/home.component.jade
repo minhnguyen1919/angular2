@@ -1,7 +1,7 @@
 article
   h3.section-header
     span Latest
-  product-list([start]="0", [end]="6")
+  product-list([limit]="limitItemPerRow")
   p.read-more
     a([routerLink]="['/products']") All products
 
@@ -18,3 +18,8 @@ article
     .col-xs-12.col-sm-12.col-md-4.category
       a([routerLink]="['/products']", [queryParams]="{type: 'Shoes'}")
         img(src="http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/banners/shoes-360x200.jpg", alt="shoes category")
+
+article
+  h3.section-header
+    span Bestsellers
+  product-list([sort]="'quantity'", [order]="'DESC'", [limit]="limitItemPerRow")

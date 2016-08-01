@@ -14,7 +14,9 @@ import { Product, ProductService } from '../shared';
 export class ProductListComponent implements OnInit {
 
   @Input() start: number;
-  @Input() end: number;
+  @Input() sort: number;
+  @Input() order: number;
+  @Input() limit: number;
 
   products: Product[];
   type: string;
@@ -35,7 +37,9 @@ export class ProductListComponent implements OnInit {
         let getProductParams = {
           type: params['type'],
           start: this.start,
-          end: this.end
+          sort: this.sort,
+          order: this.order,
+          limit: this.limit
         };
 
         this.getProduct(getProductParams);

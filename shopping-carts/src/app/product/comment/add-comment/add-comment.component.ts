@@ -56,9 +56,9 @@ export class AddCommentComponent implements OnInit {
     this.isAdding = true;
     comment.productId = this.postId;
     this.commentService.save(comment)
-      .subscribe(comment => {
+      .subscribe(newComment => {
         this.isAdding = false;
-        this.newComment.emit(comment);
+        this.newComment.emit(newComment);
 
         this.resetFormData();
       });
