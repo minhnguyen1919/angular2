@@ -1,0 +1,10 @@
+.sidebar
+  article
+    h3.section-header
+      span Latest
+    product-list([limit]="limitItemPerRow", [displayType]="2")
+  .clear-fix
+  article
+    h3.section-header
+      span Bestseller
+    product-list([limit]="limitItemPerRow", [sort]="'quantity'", [order]="'DESC'", [displayType]="2")

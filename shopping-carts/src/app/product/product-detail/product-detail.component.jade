@@ -1,38 +1,43 @@
-.product-detail(*ngIf="product")
-  h2.product-detail__name
-    | {{product.name}}
-  .row
-    .col-md-6.product-detail__box.product-detail__image
-      img(src="http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/apple_cinema_30-350x350.jpg", alt="shoes alt")
-    .col-md-6.product-detail__box.product-detail__wrapper
-      .product-detail__info
-        p
-          | Type:
-          span {{product.type}}
-      .product-detail__info
-        p
-          | Branch:
-          span {{product.madeIn}}
-      .product-detail__info
-        p
-          | Product Code:
-          span {{product.name}}
-      .product-detail__price
-        | ${{product.price}}.00
-      .product-detail__option
-        .product-detail__size
-          | Available size: {{product.size}}
+.row
+  .col-xs-12.col-sm-12.col-md-9
+    .product-detail(*ngIf="product")
+      h2.product-detail__name
+        | {{product.name}}
+      .row
+        .col-md-6.product-detail__box.product-detail__image
+          img(src="http://demo.harnishdesign.net/opencart/bigshop/v2/image/cache/catalog/demo/apple_cinema_30-350x350.jpg", alt="shoes alt")
+        .col-md-6.product-detail__box.product-detail__wrapper
+          .product-detail__info
+            p
+              | Type:
+              span {{product.type}}
+          .product-detail__info
+            p
+              | Branch:
+              span {{product.madeIn}}
+          .product-detail__info
+            p
+              | Product Code:
+              span {{product.name}}
+          .product-detail__price
+            | ${{product.price}}.00
+          .product-detail__option
+            .product-detail__size
+              | Available size: {{product.size}}
 
-  // Nav tabs
-  .tab-wrapper
-    ul.nav.nav-tabs(role='tablist')
-      li.active(role='presentation')
-        a(href='#description', aria-controls='description', role='tab', data-toggle='tab') Description
-      li(role='presentation')
-        a(href='#comments', aria-controls='comments', role='tab', data-toggle='tab') Reviews
-    // Tab panes
-    .tab-content
-      #description.tab-pane.active(role='tabpanel')
-        | {{product?.description}}
-      #comments.tab-pane(role='tabpanel')
-        comment([postId]="product.id")
+      // Nav tabs
+      .tab-wrapper
+        ul.nav.nav-tabs(role='tablist')
+          li.active(role='presentation')
+            a(href='#description', aria-controls='description', role='tab', data-toggle='tab') Description
+          li(role='presentation')
+            a(href='#comments', aria-controls='comments', role='tab', data-toggle='tab') Reviews
+        // Tab panes
+        .tab-content
+          #description.tab-pane.active(role='tabpanel')
+            | {{product?.description}}
+          #comments.tab-pane(role='tabpanel')
+            comment([postId]="product.id")
+
+  .hidden-xs.hidden-sm.col-md-3
+    sidebar

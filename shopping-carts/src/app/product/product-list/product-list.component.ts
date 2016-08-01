@@ -13,10 +13,11 @@ import { Product, ProductService } from '../shared';
 
 export class ProductListComponent implements OnInit {
 
-  @Input() start: number;
-  @Input() sort: number;
-  @Input() order: number;
-  @Input() limit: number;
+  @Input() start: string;
+  @Input() sort: string;
+  @Input() order: string;
+  @Input() limit: string;
+  @Input() displayType: any;
 
   products: Product[];
   type: string;
@@ -29,6 +30,8 @@ export class ProductListComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.displayType = this.displayType || 1;
+
     this.router
       .routerState
       .queryParams

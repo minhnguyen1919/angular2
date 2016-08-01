@@ -1,8 +1,9 @@
-.row.products
-  .col.xs-6.col-sm-4.col-md-3.col-lg-2(*ngFor="let product of products")
+.products([ngClass]="{'row': displayType === 1, 'sidebar-products': displayType === 2}")
+  div(*ngFor="let product of products", [ngClass]="{'col xs-6 col-sm-4 col-md-3 col-lg-2': displayType === 1}")
     .product
       a.product__image([routerLink]="['/products', product.name]", [queryParams]="{}")
         img(src="{{product.image}}", alt="{{product.type}}")
-      a.product__name([routerLink]="['/products', product.name]", [queryParams]="{}") {{product.name}}
-      .product__price ${{product?.price}}.00
-      a.add-to-cart(href="javascript: void(0);") Add to Cart
+      .product__info
+        a.product__name([routerLink]="['/products', product.name]", [queryParams]="{}") {{product.name}}
+        .product__price ${{product?.price}}.00
+        a.add-to-cart(href="javascript: void(0);", *ngIf="displayType === 1") Add to Cart

@@ -3,12 +3,14 @@ import { ActivatedRoute } from '@angular/router';
 
 import { Product, ProductService } from '../shared';
 import { CommentComponent } from '../comment';
+import { SidebarComponent } from '../sidebar';
 
 @Component({
   selector: 'product-detail',
   template: require('./product-detail.component.jade'),
   directives: [
-    CommentComponent
+    CommentComponent,
+    SidebarComponent
   ]
 })
 
