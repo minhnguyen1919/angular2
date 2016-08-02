@@ -7,7 +7,7 @@ import { ProductListComponent } from '../product';
 import { APP_CONSTANT } from '../app.constant';
 
 @Component({
-  selector: 'home',
+  selector: 'main-home',
   template: require('./home.component.jade'),
   directives: [
     ROUTER_DIRECTIVES,

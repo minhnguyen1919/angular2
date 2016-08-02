@@ -61,6 +61,9 @@ export class AddCommentComponent implements OnInit {
         this.newComment.emit(newComment);
 
         this.resetFormData();
+      },
+      errs => {
+        console.log(errs);
       });
   }
 }

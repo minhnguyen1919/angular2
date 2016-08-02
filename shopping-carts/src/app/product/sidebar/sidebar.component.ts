@@ -4,7 +4,7 @@ import { ProductListComponent } from '../product-list';
 import { APP_CONSTANT } from '../../app.constant';
 
 @Component({
-  selector: 'sidebar',
+  selector: 'main-sidebar',
   template: require('./sidebar.component.jade'),
   directives: [
     ProductListComponent

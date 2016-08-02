@@ -5,7 +5,7 @@ import { AddCommentComponent } from './add-comment';
 import { Comment, CommentService } from './shared';
 
 @Component({
-  selector: 'comment',
+  selector: 'main-comment',
   template: require('./comment.component.jade'),
   directives: [
     CommentDetailComponent,
@@ -35,6 +35,9 @@ export class CommentComponent implements OnInit, OnChanges {
     this.commentService.getComments(this.postId)
       .subscribe(comments => {
         this.comments = comments;
+      },
+      errs => {
+        console.log(errs);
       });
   }
 

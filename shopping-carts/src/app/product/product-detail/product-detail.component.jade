@@ -37,7 +37,7 @@
           #description.tab-pane.active(role='tabpanel')
             | {{product?.description}}
           #comments.tab-pane(role='tabpanel')
-            comment([postId]="product.id")
+            main-comment([postId]="product.id")
 
   .hidden-xs.hidden-sm.col-md-3
-    sidebar
+    main-sidebar

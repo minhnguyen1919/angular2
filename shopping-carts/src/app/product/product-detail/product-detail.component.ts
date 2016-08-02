@@ -32,8 +32,10 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
         .subscribe(
           product => {
             this.product = product[0];
-          }
-        );
+          },
+          errs => {
+            console.log(errs);
+          });
     });
   }
 
