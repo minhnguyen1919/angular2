@@ -20,7 +20,7 @@
               | Product Code:
               span {{product.name}}
           .product-detail__price
-            | ${{product.price}}.00
+            | {{product?.price | currency:'USD': true: '1.2-3'}}
           .product-detail__option
             .product-detail__size
               | Available size: {{product.size}}

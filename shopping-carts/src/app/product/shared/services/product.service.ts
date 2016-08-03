@@ -1,7 +1,9 @@
 import { Injectable, Inject } from '@angular/core';
 import { Http, URLSearchParams, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
+
 import { Product } from '../models';
+import { APP_CONSTANT } from '../../../app.constant';
 import { APP_CONFIG, AppConfig } from '../../../app.config';
 
 @Injectable()
@@ -12,7 +14,7 @@ export class ProductService {
   constructor(
     private http: Http,
     @Inject(APP_CONFIG) private config: AppConfig) {
-    this.productUrl = this.config.apiEndpoint + '/products';
+    this.productUrl = this.config.apiEndpoint + APP_CONSTANT.api.products.route;
   }
 
   private extractData(res: Response) {
@@ -30,11 +32,11 @@ export class ProductService {
   private setParams(params: any): URLSearchParams {
     let searchParams = new URLSearchParams();
 
-    searchParams = this.setParam(searchParams, 'type', params.type);
-    searchParams = this.setParam(searchParams, '_start', params.start);
-    searchParams = this.setParam(searchParams, '_sort', params.sort);
-    searchParams = this.setParam(searchParams, '_order', params.order);
-    searchParams = this.setParam(searchParams, '_limit', params.limit);
+    searchParams = this.setParam(searchParams, APP_CONSTANT.api.products.params.type, params.type);
+    searchParams = this.setParam(searchParams, APP_CONSTANT.api.products.params.start, params.start);
+    searchParams = this.setParam(searchParams, APP_CONSTANT.api.products.params.sort, params.sort);
+    searchParams = this.setParam(searchParams, APP_CONSTANT.api.products.params.order, params.order);
+    searchParams = this.setParam(searchParams, APP_CONSTANT.api.products.params.limit, params.limit);
 
     return searchParams;
   }
@@ -46,7 +48,7 @@ export class ProductService {
 
   getProduct(name: string): Observable<Product> {
     let searchParams = new URLSearchParams();
-    searchParams.set('name', name);
+    searchParams.set(APP_CONSTANT.api.products.params.name, name);
 
     return this.http.get(this.productUrl, { search: searchParams })
       .map(this.extractData);

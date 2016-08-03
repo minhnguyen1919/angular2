@@ -3,9 +3,7 @@ import './rxjs-operators';
 import 'rxjs/Rx';
 
 import './assets';
-
 import { ContentComponent, HeaderComponent, FooterComponent } from './shared';
-
 import { ProductService } from './product';
 
 @Component({
@@ -22,6 +20,4 @@ import { ProductService } from './product';
 })
 
 export class AppComponent {
-  constructor() {
-  }
 }

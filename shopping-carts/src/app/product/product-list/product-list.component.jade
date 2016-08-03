@@ -5,5 +5,5 @@
         img(src="{{product.image}}", alt="{{product.type}}")
       .product__info
         a.product__name([routerLink]="['/products', product.name]", [queryParams]="{}") {{product.name}}
-        .product__price ${{product?.price}}.00
+        .product__price {{product?.price | currency:'USD': true: '1.2-3'}}
         a.add-to-cart(href="javascript: void(0);", *ngIf="displayType === 1") Add to Cart

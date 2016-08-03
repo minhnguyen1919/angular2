@@ -1,19 +1,7 @@
-import {
-  Component,
-  Input,
-  Output,
-  OnInit,
-  EventEmitter } from '@angular/core';
-import {
-  FORM_DIRECTIVES,
-  REACTIVE_FORM_DIRECTIVES,
-  FormBuilder,
-  FormControl,
-  FormGroup } from '@angular/forms';
+import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
+import { FORM_DIRECTIVES, REACTIVE_FORM_DIRECTIVES, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
-import {
-  Comment,
-  CommentService } from '../shared';
+import { Comment, CommentService } from '../shared';
 
 @Component({
   selector: 'add-comment',
@@ -33,7 +21,6 @@ export class AddCommentComponent implements OnInit {
   constructor(
     private commentService: CommentService,
     private formBuilder: FormBuilder) {
-
   }
 
   ngOnInit() {
@@ -55,6 +42,7 @@ export class AddCommentComponent implements OnInit {
 
     this.isAdding = true;
     comment.productId = this.postId;
+
     this.commentService.save(comment)
       .subscribe(newComment => {
         this.isAdding = false;

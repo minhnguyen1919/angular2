@@ -36,16 +36,13 @@ export class ProductListComponent implements OnInit {
       .routerState
       .queryParams
       .subscribe(params => {
-
-        let getProductParams = {
+        this.getProduct({
           type: params['type'],
           start: this.start,
           sort: this.sort,
           order: this.order,
           limit: this.limit
-        };
-
-        this.getProduct(getProductParams);
+        });
       });
   }
 
