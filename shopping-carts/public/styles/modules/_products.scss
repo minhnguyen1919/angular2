@@ -29,7 +29,7 @@
     &__price {
       font-size: 22px;
       font-weight: 700;
-      color: #037ad1;
+      color: $strong-blue;
     }
   }
 }
@@ -101,7 +101,7 @@
       span {
         font-weight: 400;
         margin-left: 10px;
-        color: blue;
+        color: $strong-blue;
       }
     }
   }

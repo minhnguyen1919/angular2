@@ -3,14 +3,14 @@
   &-detail {
     margin: 15px 0;
     padding: 10px;
-    background-color: #fcf8e3;
+    background-color: $light-grayish-yellow;
     border-radius: 10px;
   }
 
   &-user {
     font-weight: 700;
     font-size: 18px;
-    color: #41b7d8;
+    color: $moderate-cyan;
   }
 
   &-text {
@@ -23,7 +23,7 @@
   p {
     font-size: 22px;
     padding-bottom: 6px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid $gray-80;
   }
 
   form {

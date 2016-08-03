@@ -1,7 +1,7 @@
 .footer {
   @extend %fixed, %bottom-0;
   width: 100%;
-  background-color: #333;
+  background-color: $gray-20;
 
   &-wrapper {
     height: 50px;
@@ -10,13 +10,13 @@
     .copyright {
       @extend %float-left;
       width: 120px;
-      color: #fff;
+      color: $white;
     }
 
     .author {
       @extend %float-right, %text-right;
       width: 150px;
-      color: #fff;
+      color: $white;
     }
   }
 }

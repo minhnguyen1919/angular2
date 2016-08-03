@@ -5,9 +5,9 @@
 
   a {
     font-size: 20px;
-    color: #555;
+    color: $sgidarkgray;
     display: inline-block;
-    border: 1px solid #41b7d8;
+    border: 1px solid $moderate-cyan;
     padding: 10px;
     border-radius: 3px;
     transition: all .3s ease-in-out;
@@ -16,7 +16,7 @@
     &:focus,
     &:active {
       text-decoration: none;
-      background-color: #41b7d8;
+      background-color: $moderate-cyan;
       color: white;
       transition: all .3s ease-in-out;
     }

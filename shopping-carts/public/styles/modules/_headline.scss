@@ -1,13 +1,13 @@
 .headline {
   transform: uppercase;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid $gray-90;
   margin: 20px 0;
 
   span {
-    color: #333;
+    color: $gray-20;
     display: inline-block;
     padding-bottom: 5px;
     margin-bottom: -1px;
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid $gray-80;
   }
 }
