@@ -73,5 +73,7 @@ for (var i = 0; i < 200; i++) {
 
 console.log(JSON.stringify({
   "products": products,
-  "comments": comments
+  "comments": comments,
+  "types": types,
+  "made_in": madeIn
 }));
