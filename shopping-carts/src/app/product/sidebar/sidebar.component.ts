@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { ProductListComponent } from '../product-list';
+import { ProductListComponent } from '../product-list-full';
 import { APP_CONSTANT } from '../../app.constant';
 
 @Component({

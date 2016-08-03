@@ -1,6 +1,6 @@
 import { RouterConfig } from '@angular/router';
 
-import { ProductListComponent } from './product-list';
+import { ProductListFullComponent } from './product-list-full';
 import { ProductDetailComponent } from './product-detail';
 import { ProductComponent } from './product.component';
 
@@ -12,7 +12,7 @@ export const ProductRoutes: RouterConfig = [
     children: [
       {
         path: '',
-        component: ProductListComponent
+        component: ProductListFullComponent
       },
       {
         path: ':name',

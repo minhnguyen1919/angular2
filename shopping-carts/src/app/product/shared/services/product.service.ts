@@ -10,11 +10,15 @@ import { APP_CONFIG, AppConfig } from '../../../app.config';
 
 export class ProductService {
   private productUrl: string;
+  private productMadeInUrl: string;
+  private productTypeUrl: string;
 
   constructor(
     private http: Http,
     @Inject(APP_CONFIG) private config: AppConfig) {
     this.productUrl = this.config.apiEndpoint + APP_CONSTANT.api.products.route;
+    this.productMadeInUrl = this.config.apiEndpoint + '/made_in';
+    this.productTypeUrl = this.config.apiEndpoint + '/types';
   }
 
   private extractData(res: Response) {
@@ -39,6 +43,16 @@ export class ProductService {
     searchParams = this.setParam(searchParams, APP_CONSTANT.api.products.params.limit, params.limit);
 
     return searchParams;
+  }
+
+  getProductType(): Observable<string[]> {
+    return this.http.get(this.productTypeUrl)
+      .map(this.extractData);
+  }
+
+  getProductMadeIn(): Observable<string[]> {
+    return this.http.get(this.productMadeInUrl)
+      .map(this.extractData);
   }
 
   getProducts(params: any): Observable<Product[]> {

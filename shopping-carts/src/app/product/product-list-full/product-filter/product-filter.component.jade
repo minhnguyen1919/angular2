@@ -1,0 +1,16 @@
+.bs-example
+  ul.nav.nav-pills(role='tablist')
+    li.dropdown.open(role='presentation')
+      a#drop1.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='true')
+        | Types
+        span.caret
+      ul#menu1.dropdown-menu(aria-labelledby='drop1')
+        li(*ngFor="let type of types")
+          a() {{ type }}
+    li.dropdown.open(role='presentation')
+      a#drop2.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='true')
+        | Made In
+        span.caret
+      ul#menu2.dropdown-menu(aria-labelledby='drop2')
+        li(*ngFor="let country of madeIn")
+          a() {{ country }}

@@ -1,7 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router, ROUTER_DIRECTIVES } from '@angular/router';
 
-import { Product, ProductService } from '../shared';
+import { Product, ProductService } from '../../shared';
+
 
 @Component({
   selector: 'product-list',
@@ -36,6 +37,8 @@ export class ProductListComponent implements OnInit {
       .routerState
       .queryParams
       .subscribe(params => {
+
+
         this.getProduct({
           type: params['type'],
           start: this.start,
