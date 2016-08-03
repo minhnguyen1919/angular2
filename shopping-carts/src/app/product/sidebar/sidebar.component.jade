@@ -1,10 +1,10 @@
-.sidebar
-  article
-    h3.section-header
+aside.sidebar
+  article.latest-wrapper
+    h3.headline
       span Latest
     product-list([limit]="limitItemPerRow", [displayType]="2")
   .clear-fix
-  article
-    h3.section-header
+  article.bestseller-wrapper
+    h3.headline
       span Bestseller
     product-list([limit]="limitItemPerRow", [sort]="'quantity'", [order]="'DESC'", [displayType]="2")
