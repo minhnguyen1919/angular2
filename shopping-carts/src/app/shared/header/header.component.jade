@@ -17,22 +17,25 @@
               a([routerLink]="['/home']")
                 | Home
                 span.sr-only (current)
-            li.dropdown(routerLinkActive="active")
-              a.dropdown-toggle(data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-                | Categories
-                span.caret
-              ul.dropdown-menu
-                li
-                  a([routerLink]="['/products']") Products
-                li.divider(role='separator')
-                li
-                  a([routerLink]="['/products']", [queryParams]="{type: 'Shoes'}") Shoes
-                li
-                  a([routerLink]="['/products']", [queryParams]="{type: 'Jacket'}") Jackets
-                li
-                  a([routerLink]="['/products']", [queryParams]="{type: 'Watches'}") Watches
+            //- li.dropdown(routerLinkActive="active")
+            //-   a.dropdown-toggle(data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+            //-     | Categories
+            //-     span.caret
+            //-   ul.dropdown-menu
+            //-     li
+            //-       a([routerLink]="['/products']") Products
+            //-     li.divider(role='separator')
+            //-     li
+            //-       a([routerLink]="['/products']", [queryParams]="{type: 'Shoes'}") Shoes
+            //-     li
+            //-       a([routerLink]="['/products']", [queryParams]="{type: 'Jacket'}") Jackets
+            //-     li
+            //-       a([routerLink]="['/products']", [queryParams]="{type: 'Watches'}") Watches
+            li(routerLinkActive="active")
+              a([routerLink]="['/products']") Products
+
             li
-              a(href="#")
+              a()
                 | Contact us
 
           form.navbar-form.navbar-left(role='search')

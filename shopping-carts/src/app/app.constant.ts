@@ -5,6 +5,7 @@ export const APP_CONSTANT = {
       params: {
         type: 'type',
         name: 'name',
+        madeIn: 'madeIn',
         start: '_start',
         sort: '_sort',
         order: '_order',

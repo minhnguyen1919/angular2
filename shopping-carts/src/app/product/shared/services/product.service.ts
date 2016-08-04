@@ -37,6 +37,7 @@ export class ProductService {
     let searchParams = new URLSearchParams();
 
     searchParams = this.setParam(searchParams, APP_CONSTANT.api.products.params.type, params.type);
+    searchParams = this.setParam(searchParams, APP_CONSTANT.api.products.params.madeIn, params.madeIn);
     searchParams = this.setParam(searchParams, APP_CONSTANT.api.products.params.start, params.start);
     searchParams = this.setParam(searchParams, APP_CONSTANT.api.products.params.sort, params.sort);
     searchParams = this.setParam(searchParams, APP_CONSTANT.api.products.params.order, params.order);

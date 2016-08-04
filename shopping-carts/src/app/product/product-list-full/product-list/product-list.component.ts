@@ -41,6 +41,7 @@ export class ProductListComponent implements OnInit {
 
         this.getProduct({
           type: params['type'],
+          madeIn: params['made_in'],
           start: this.start,
           sort: this.sort,
           order: this.order,
